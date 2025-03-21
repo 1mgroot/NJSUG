@@ -18,32 +18,67 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deployment to Vercel
+## Branching Strategy
 
-This website is configured for easy deployment on Vercel. Follow these steps:
+We follow a trunk-based development workflow with the following branches:
 
-1. Push your code to a GitHub, GitLab, or Bitbucket repository.
-2. Create an account on [Vercel](https://vercel.com) if you don't have one.
-3. Click on "New Project" in the Vercel dashboard.
-4. Import your repository.
-5. Vercel will automatically detect that it's a Next.js project and configure the build settings.
-6. Click "Deploy" and wait for the build to complete.
+- `main` - Production branch, deployed to the main domain
+- `develop` - Development branch, deployed to staging
+- Feature branches - For new features and fixes
 
-## Connecting GoDaddy Domain to Vercel
+### Development Workflow
 
-After deploying to Vercel, follow these steps to connect your GoDaddy domain:
+1. Create a feature branch from develop:
+```bash
+git checkout develop
+git pull origin develop
+git checkout -b feature/your-feature-name
+```
 
-1. In the Vercel dashboard, go to your project settings.
-2. Navigate to the "Domains" section.
-3. Add your domain (e.g., `njsug.org`).
-4. Vercel will provide you with DNS records that you need to add to your GoDaddy account.
-5. Log in to your GoDaddy account.
-6. Go to the DNS management page for your domain.
-7. Add the DNS records provided by Vercel:
-   - Add an `A` record pointing to Vercel's IP address.
-   - Add `CNAME` records for `www` and any subdomains.
-   - If you want to use Vercel nameservers, update the nameservers in GoDaddy.
-8. Wait for DNS propagation (can take up to 48 hours, but usually much less).
+2. Make your changes and commit:
+```bash
+git add .
+git commit -m "feat: your feature description"
+```
+
+3. Push to GitHub:
+```bash
+git push -u origin feature/your-feature-name
+```
+
+4. Create a Pull Request (PR) to the develop branch
+5. After review and approval, merge to develop
+6. Test on staging environment
+7. When ready for production, create a PR from develop to main
+
+## Deployment
+
+### Vercel Deployment
+
+This website is configured for deployment on Vercel with the following environments:
+
+- Production (main branch): `njsug.org`
+- Staging (develop branch): `develop-njsug.vercel.app`
+- Feature Previews: `feature-name-njsug.vercel.app`
+
+To deploy:
+
+1. Push your code to GitHub
+2. Vercel will automatically deploy:
+   - PRs to preview URLs
+   - Merged PRs to staging/production based on target branch
+
+### Connecting GoDaddy Domain
+
+After deploying to Vercel:
+
+1. In the Vercel dashboard, go to your project settings
+2. Navigate to the "Domains" section
+3. Add your domain (e.g., `njsug.org`)
+4. Vercel will provide DNS records to add to GoDaddy:
+   - Add an `A` record pointing to Vercel's IP
+   - Add `CNAME` records for `www` and subdomains
+   - Or update nameservers if using Vercel DNS
 
 ## Project Structure
 
