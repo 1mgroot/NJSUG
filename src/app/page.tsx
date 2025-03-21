@@ -1,8 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-
 export default function Home() {
   return (
     <div className="min-h-screen bg-primary px-16 py-12 sm:px-40 sm:py-32">
