@@ -127,7 +127,7 @@ export default function ConferencePage() {
                     <h3 className="text-xl font-semibold text-green-800 dark:text-green-400 mb-2">Thank you for registering!</h3>
                     <p className="text-green-700 dark:text-green-300">
                       Your registration for the NJSUG 2025 Spring Conference has been received. 
-                      We've sent a confirmation email to {formData.email} with all the details.
+                      We&apos;ve sent a confirmation email to {formData.email} with all the details.
                     </p>
                   </div>
                 ) : (

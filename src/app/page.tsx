@@ -97,7 +97,7 @@ export default function Home() {
               Ready to join us at NJSUG 2025?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Don't miss this opportunity to learn, network, and grow with the NJSUG community.
+              Don&apos;t miss this opportunity to learn, network, and grow with the NJSUG community.
               Early bird registration is now open!
             </p>
             <Link 
