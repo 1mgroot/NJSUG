@@ -1,15 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const geistSans = Geist({
+  variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "swap",
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "NJSUG - Coming Soon",
-  description: "The New Jersey SAS Users Group (NJSUG) website is currently under development.",
+  title: "NJSUG - New Jersey SAS Users Group",
+  description: "The official website for the New Jersey SAS Users Group (NJSUG)",
   keywords: ["NJSUG", "SAS", "New Jersey", "Data Analytics", "User Group"],
   authors: [{ name: "NJSUG" }],
   viewport: "width=device-width, initial-scale=1",
@@ -23,7 +28,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
