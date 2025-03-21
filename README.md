@@ -1,24 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NJSUG Website
 
-## Getting Started
+This is the official website for the New Jersey SAS Users Group (NJSUG), built with Next.js and Tailwind CSS.
 
-First, run the development server:
+## Development
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This website is configured for easy deployment on Vercel. Follow these steps:
+
+1. Push your code to a GitHub, GitLab, or Bitbucket repository.
+2. Create an account on [Vercel](https://vercel.com) if you don't have one.
+3. Click on "New Project" in the Vercel dashboard.
+4. Import your repository.
+5. Vercel will automatically detect that it's a Next.js project and configure the build settings.
+6. Click "Deploy" and wait for the build to complete.
+
+## Connecting GoDaddy Domain to Vercel
+
+After deploying to Vercel, follow these steps to connect your GoDaddy domain:
+
+1. In the Vercel dashboard, go to your project settings.
+2. Navigate to the "Domains" section.
+3. Add your domain (e.g., `njsug.org`).
+4. Vercel will provide you with DNS records that you need to add to your GoDaddy account.
+5. Log in to your GoDaddy account.
+6. Go to the DNS management page for your domain.
+7. Add the DNS records provided by Vercel:
+   - Add an `A` record pointing to Vercel's IP address.
+   - Add `CNAME` records for `www` and any subdomains.
+   - If you want to use Vercel nameservers, update the nameservers in GoDaddy.
+8. Wait for DNS propagation (can take up to 48 hours, but usually much less).
+
+## Project Structure
+
+- `src/app/` - Main application pages using the App Router
+- `src/components/` - Reusable UI components
+- `public/` - Static assets like images and fonts
+- `tailwind.config.js` - Tailwind CSS configuration
+- `vercel.json` - Vercel deployment configuration
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/) - Type checking
+- [Vercel](https://vercel.com/) - Deployment platform
 
 ## Learn More
 
@@ -28,9 +68,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
