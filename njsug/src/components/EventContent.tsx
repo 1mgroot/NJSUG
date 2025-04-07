@@ -11,41 +11,23 @@ export function EventContent() {
         <div className="grid grid-cols-3 gap-8 items-center">
           {/* Left Column - Title */}
           <div>
-            <h1 className={cn(
-              "text-4xl md:text-5xl lg:text-6xl font-bold text-white",
-              "leading-[1.2] tracking-tight",
-              "mb-4 md:mb-0"
-            )}>
-              NJSUG 2025
-              <span className="block text-2xl md:text-3xl lg:text-4xl mt-2 font-light">
-                Spring Meeting
-              </span>
-            </h1>
+            NJSUG 2025
           </div>
 
           {/* Right Column - Content */}
           <div className="col-span-2">
             {/* Event Details */}
             <div className="space-y-2">
-              <p className={cn(
-                "text-base md:text-lg text-white/90",
-                "font-medium"
-              )}>
+              <p>
                 Date: May 13th, 2025
               </p>
-              <p className={cn(
-                "text-base md:text-lg text-white/90",
-                "font-medium"
-              )}>
+              <p>
                 Location: Hyatt House Branchburg, NJ
               </p>
             </div>
 
             {/* Description */}
-            <p className={cn(
-              "text-base md:text-lg text-white/80",
-              "leading-relaxed"
-            )}>
+            <p >
               The New Jersey SAS Users Group (NJSUG) invites you to join our 2025 Spring Meeting!
               This event brings together SAS users, data analysts, and industry leaders to explore
               the latest trends, best practices, and innovations in data analytics.
