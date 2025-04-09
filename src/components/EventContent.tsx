@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { LocationAddress } from './LocationAddress'
 
 export function EventContent() {
   return (
