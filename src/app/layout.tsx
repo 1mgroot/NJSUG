@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NJSUG - New Jersey SAS Users Group",
-  description: "The official website for the New Jersey SAS Users Group (NJSUG)",
-  keywords: ["NJSUG", "SAS", "New Jersey", "Data Analytics", "User Group"],
-  authors: [{ name: "NJSUG" }],
-  viewport: "width=device-width, initial-scale=1",
-  robots: "index, follow",
+  title: "NJSUG",
+  description: "NJSUG",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
