@@ -29,13 +29,12 @@ export function EventContent() {
               <h2 className="text-2xl font-bold">
                 Time: 9:00 AM - 1:00 PM 
               </h2>
-              <h2 className="text-2xl font-bold mb-2">
+              <h2 className="text-2xl font-bold">
                 Location: Hyatt House Branchburg / Bridgewater
               </h2>
-              {/* <LocationAddress 
-                address="3141 US-22, Branchburg, NJ 08876"
-                className="mb-4" 
-              /> */}
+              <h2 className='text-2xl font-bold mb-2'>
+                Address: 3141 US-22, Branchburg, NJ 08876
+              </h2>
             </div>
 
             {/* Description */}
