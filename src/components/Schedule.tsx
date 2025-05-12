@@ -15,7 +15,7 @@ const scheduleData: ScheduleItem[] = [
   { time: '10:30 am – 10:45 am', title: 'Break', isBreak: true },
   { time: '10:45 am – 11:15 am', title: 'Gen AI in Biometrics: Transforming Clinical trials with Supercharged Efficiency and Innovation', speaker: 'Kevin Lee' },
   { time: '11:15 am – 11:55 am', title: 'Panel Discussion: Navigating the Future of Statistical Programming: Skills, Tools, and Opportunities', speaker: 'Sufang Huang, Sanofi; Shaveta Bansal, Merck; Benjamin Koch, Merck; Lynn Zhang, Merck; Sachin Tiwari, Jazz Pharmaceuticals' },
-  { time: '11:55 am – 12:00 pm', title: 'Closing' },
+  { time: '11:55 am – 12:00 pm', title: 'Closing', speaker: 'Jeff Xia, Merck' },
   { time: '12:00 pm – 1:00 pm', title: 'Lunch and Networking' },
 ];
 
