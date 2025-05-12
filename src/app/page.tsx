@@ -2,6 +2,7 @@ import { Banner } from '@/components/Banner'
 import { ContactUs } from '@/components/ContactUs'
 import { EventContent } from '@/components/EventContent'
 import { Navbar } from '@/components/Navbar'
+import { Schedule } from '@/components/Schedule'
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Navbar />
       <Banner />
       <EventContent />
+      <Schedule />
       <ContactUs />
       {/* Add other sections here */}
     </main>
