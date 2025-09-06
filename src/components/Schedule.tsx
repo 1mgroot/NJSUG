@@ -49,12 +49,20 @@ export function Schedule() {
   const memoizedScheduleData = useMemo(() => scheduleData, []);
 
   return (
-    <section className="w-full py-16 bg-gradient-to-b from-[#007A73] to-[#005F5A]">
+    <section 
+      id="schedule" 
+      className="w-full py-16 bg-gradient-to-b from-[#007A73] to-[#005F5A]"
+      aria-labelledby="schedule-heading"
+    >
       <div className="w-full max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center text-white">Event Schedule</h2>
-        <div className="space-y-4">
+        <h2 id="schedule-heading" className="text-3xl font-bold mb-8 text-center text-white">
+          Event Schedule
+        </h2>
+        <div className="space-y-4" role="list" aria-label="Conference schedule">
           {memoizedScheduleData.map((item, index) => (
-            <ScheduleItem key={index} item={item} />
+            <div key={index} role="listitem">
+              <ScheduleItem item={item} />
+            </div>
           ))}
         </div>
       </div>

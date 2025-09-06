@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://njsug.vercel.app/sitemap.xml
+
+# Disallow crawling of admin or private areas (if any exist)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow crawling of important pages
+Allow: /
+Allow: /images/
+Allow: /favicon.svg
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
