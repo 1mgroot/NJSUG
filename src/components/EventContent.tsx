@@ -46,22 +46,6 @@ export function EventContent() {
               </p>
             </div>
 
-            <div className='mt-4 text-white/50' >
-              <p className='text-lg font-bold'>Registration is now full, </p>
-              <p className='text-lg font-bold'>but we’d still love to have you!</p>
-              <p className='text-lg'>Join our waitlist and we’ll be in touch if a spot opens up.</p>
-            </div>
-
-            {/* Register Button */}
-            <div className='mt-4'>
-            <Button asChild variant='custom'>
-              <Link
-                href="https://forms.office.com/Pages/ResponsePage.aspx?id=WkDVRZWwDkKjyvM5Wus2VN9UuMwD-oRCuKj7WGJvRMRUOEozS0VYVDU3NVRTVjJNMFFYWDBIUEU3OS4u"
-              >
-                JOIN WAITLIST
-              </Link>
-            </Button>
-            </div>
 
           </div>
         </div>
