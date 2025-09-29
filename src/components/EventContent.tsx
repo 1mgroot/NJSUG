@@ -1,6 +1,3 @@
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-
 export function EventContent() {
   return (
     <div className="py-12 md:py-24 font-mono">
