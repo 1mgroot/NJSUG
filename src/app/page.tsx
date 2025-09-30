@@ -1,5 +1,4 @@
 import { Navbar } from '@/components/Navbar'
-import { EventBanner } from '@/components/EventBanner'
 import { Button } from '@/components/ui/button'
 import { PastPhotos } from '@/components/PastPhotos'
 
