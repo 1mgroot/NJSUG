@@ -34,15 +34,6 @@ export function EventContent() {
               </h2>
             </div>
 
-            {/* Description */}
-            <div className='mt-4'>
-              <p className="text-lg">
-                The New Jersey SAS Users Group (NJSUG) invites you to join our 2025 Spring Meeting!
-                This event brings together SAS users, data analysts, and industry leaders to explore
-                the latest trends, best practices, and innovations in data analytics.
-              </p>
-            </div>
-
 
           </div>
         </div>

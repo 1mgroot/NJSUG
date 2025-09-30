@@ -17,23 +17,20 @@ interface EventPhoto {
   caption?: string
 }
 
-// Event photos for banner carousel
+// Real event photos for banner carousel
 const eventPhotos: EventPhoto[] = [
-  { id: 1, src: '/images/NJSUGBanner.svg', alt: 'NJSUG Event Photo 1', caption: 'NJSUG 2025 Spring Meeting' },
-  { id: 2, src: '/images/NJSUGLogo.png', alt: 'NJSUG Event Photo 2', caption: 'Networking Session' },
-  { id: 3, src: '/images/committee/Changhong Shi.jpg', alt: 'NJSUG Event Photo 3', caption: 'Opening Presentations' },
-  { id: 4, src: '/images/committee/Chen Wang.jpg', alt: 'NJSUG Event Photo 4', caption: 'Technical Discussions' },
-  { id: 5, src: '/images/committee/jeff-xia-2024-1.jpg', alt: 'NJSUG Event Photo 5', caption: 'Panel Sessions' },
-  { id: 6, src: '/images/committee/Junze.png', alt: 'NJSUG Event Photo 6', caption: 'Group Activities' },
-  { id: 7, src: '/images/NJSUGBanner.svg', alt: 'NJSUG Event Photo 7', caption: 'Workshop Sessions' },
-  { id: 8, src: '/images/NJSUGLogo.png', alt: 'NJSUG Event Photo 8', caption: 'Coffee Breaks' },
-  { id: 9, src: '/images/committee/Changhong Shi.jpg', alt: 'NJSUG Event Photo 9', caption: 'Interactive Sessions' },
-  { id: 10, src: '/images/committee/Chen Wang.jpg', alt: 'NJSUG Event Photo 10', caption: 'Closing Ceremony' },
-  { id: 11, src: '/images/committee/jeff-xia-2024-1.jpg', alt: 'NJSUG Event Photo 11', caption: 'Lunch & Networking' },
-  { id: 12, src: '/images/committee/Junze.png', alt: 'NJSUG Event Photo 12', caption: 'Awards & Recognition' },
-  { id: 13, src: '/images/NJSUGBanner.svg', alt: 'NJSUG Event Photo 13', caption: 'Community Building' },
-  { id: 14, src: '/images/NJSUGLogo.png', alt: 'NJSUG Event Photo 14', caption: 'Knowledge Sharing' },
-  { id: 15, src: '/images/committee/Changhong Shi.jpg', alt: 'NJSUG Event Photo 15', caption: 'Future Planning' }
+  { id: 1, src: '/images/event-photos/Group_1.jpg', alt: 'NJSUG 2025 Spring Meeting Group Photo', caption: 'NJSUG 2025 Spring Meeting' },
+  { id: 2, src: '/images/event-photos/Changhong_1.jpg', alt: 'Changhong Shi Opening Remarks', caption: 'Opening Remarks by Changhong Shi' },
+  { id: 3, src: '/images/event-photos/Melodie_1.jpg', alt: 'Melodie Rush Presentation', caption: 'SAS®, SQL, R, and Python: We\'re All Friends by Melodie Rush' },
+  { id: 4, src: '/images/event-photos/Pavan_1.jpg', alt: 'Sri Pavan Vemuri R Shiny Presentation', caption: 'R Shiny Dev Process and Use Cases by Sri Pavan Vemuri' },
+  { id: 5, src: '/images/event-photos/Kevin_3.jpg', alt: 'Kevin Lee Gen AI Presentation', caption: 'Gen AI in Biometrics: Transforming Clinical Trials by Kevin Lee' },
+  { id: 6, src: '/images/event-photos/Panel_2.jpg', alt: 'Panel Discussion Session', caption: 'Panel Discussion: Navigating the Future of Statistical Programming' },
+  { id: 7, src: '/images/event-photos/Panel_4.jpg', alt: 'Panel Discussion Continued', caption: 'Panel Discussion: Navigating the Future of Statistical Programming' },
+  { id: 8, src: '/images/event-photos/Jeff_1.jpg', alt: 'Jeff Xia Closing Remarks', caption: 'Closing Remarks by Jeff Xia' },
+  { id: 9, src: '/images/event-photos/3.jpg', alt: 'Coffee' },
+  { id: 10, src: '/images/event-photos/4.jpg', alt: 'Interactive Session'},
+  { id: 12, src: '/images/event-photos/8.jpg', alt: 'Coffee Break Networking' },
+  { id: 13, src: '/images/event-photos/ChenWangHost.jpg', alt: 'Host by Chen Wang', caption: 'Host by Chen Wang' }
 ]
 
 export function EventBanner() {
@@ -72,13 +69,13 @@ export function EventBanner() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  className="object-cover"
+                  className="object-cover object-[center_70%]"
                   priority={photo.id === 1}
                   sizes="100vw"
                 />
                 
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
+                {/* Minimal overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-transparent" />
                 
                 {/* Caption overlay */}
                 {photo.caption && (

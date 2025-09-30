@@ -4,11 +4,12 @@ interface ScheduleItem {
   time: string;
   title: string;
   speaker?: string;
+  host?: string;
   isBreak?: boolean;
 }
 
 const scheduleData: ScheduleItem[] = [
-  { time: '8:30 am – 9:00 am', title: 'Doors Open / Registration'},
+  { time: '8:30 am – 9:00 am', title: 'Doors Open / Registration' },
   { time: '9:00 am – 9:15 am', title: 'Opening Remarks', speaker: 'Changhong Shi, Merck' },
   { time: '9:15 am – 10:00 am', title: 'SAS®, SQL, R, and Python: We\'re All Friends', speaker: 'Melodie Rush, SAS' },
   { time: '10:00 am – 10:30 am', title: 'R Shiny Dev Process and Use Cases', speaker: 'Sri Pavan Vemuri, Regeneron' },
@@ -38,6 +39,11 @@ const ScheduleItem = React.memo(({ item }: { item: ScheduleItem }) => (
             Speaker: {item.speaker}
           </p>
         )}
+        {item.host && (
+          <p className="text-sm text-white/70 mt-1">
+            Host: {item.host}
+          </p>
+        )}
       </div>
     </div>
   </div>
@@ -51,7 +57,8 @@ export function Schedule() {
   return (
     <section className="w-full py-16 bg-gradient-to-b from-[#007A73] to-[#005F5A]">
       <div className="w-full max-w-4xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-8 text-center text-white">Event Schedule</h2>
+        <h2 className="text-3xl font-bold mb-4 text-center text-white">Event Schedule</h2>
+        <p className="text-center text-white/80 mb-8">Hosted by Chen Wang</p>
         <div className="space-y-4">
           {memoizedScheduleData.map((item, index) => (
             <ScheduleItem key={index} item={item} />
