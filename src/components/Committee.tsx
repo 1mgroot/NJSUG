@@ -2,7 +2,6 @@ import Image from 'next/image'
 
 interface CommitteeMember {
   name: string
-  role: string
   company: string
   image: string
 }
@@ -10,25 +9,21 @@ interface CommitteeMember {
 const committeeMembers: CommitteeMember[] = [
   {
     name: 'Changhong Shi',
-    role: 'Placeholder for Role',
     company: 'Merck',
     image: '/images/committee/Changhong Shi.jpg'
   },
   {
     name: 'Jeff Xia',
-    role: 'Role',
     company: 'Merck',
     image: '/images/committee/jeff-xia-2024-1.jpg'
   },
   {
     name: 'Chen Wang',
-    role: 'Role',
     company: 'Merck',
     image: '/images/committee/Chen Wang.jpg'
   },
   {
     name: 'Junze Zhang',
-    role: 'Role',
     company: 'Merck',
     image: '/images/committee/Junze.png'
   }
@@ -68,9 +63,6 @@ export function Committee() {
                 {member.name}
               </h3>
               
-              <p className="text-white/90 font-medium mb-1">
-                {member.role}
-              </p>
               
               <p className="text-white/70 text-sm">
                 {member.company}
