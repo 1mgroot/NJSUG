@@ -17,11 +17,19 @@ export default function Home() {
 
         <div className="container mx-auto px-4 py-16 md:py-24 text-center flex items-center justify-center">
           <div className="mx-auto max-w-4xl -translate-y-[2vh] md:-translate-y-[3vh]">
-            <div className="mb-6 flex justify-center">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-[clamp(0.8rem,1.2vw,0.95rem)] font-semibold text-white/90 ring-1 ring-white/20 backdrop-blur">
-                <span className="size-2 rounded-full bg-[#DAFFA9]"></span>
-                Coming NJSUG 2025 Webinar
-              </span>
+            {/* Apple-style Coming Soon Badge */}
+            <div className="mb-8 flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#DAFFA9]/30 via-[#00D1C1]/30 to-[#DAFFA9]/30 blur-lg scale-110 opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <span className="relative inline-flex items-center gap-3 rounded-full bg-white/15 px-8 py-4 text-[clamp(1rem,1.6vw,1.3rem)] font-semibold text-white ring-2 ring-white/30 backdrop-blur-md shadow-2xl hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center gap-2">
+                    <span className="size-3 rounded-full bg-[#DAFFA9] animate-pulse shadow-lg shadow-[#DAFFA9]/50"></span>
+                    <span className="bg-gradient-to-r from-white via-white/95 to-white/90 bg-clip-text text-transparent font-bold tracking-wide">
+                      NJSUG 2025 Webinar
+                    </span>
+                  </div>
+                </span>
+              </div>
             </div>
 
             <h1 className="font-extrabold tracking-tight leading-[1.05] text-[clamp(2.5rem,7.5vw,5.5rem)]">
@@ -31,11 +39,12 @@ export default function Home() {
               November 12, 2025
             </p>
 
-            <div className="mt-[clamp(1rem,4vh,2.5rem)] flex justify-center">
+            {/* Register button temporarily hidden */}
+            {/* <div className="mt-[clamp(1rem,4vh,2.5rem)] flex justify-center">
               <Button variant="custom" size="lg" type="button" aria-label="Register for 2025 Webinar" className="px-[clamp(1.25rem,3vw,2rem)] py-[clamp(0.8rem,1.6vw,1.1rem)] text-[clamp(0.95rem,1.4vw,1.125rem)] rounded-xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)]">
                 Register
               </Button>
-            </div>
+            </div> */}
             <p className="mt-6 text-[clamp(0.8rem,1.1vw,0.95rem)] text-white/70">Schedule and speakers coming soon.</p>
           </div>
         </div>
