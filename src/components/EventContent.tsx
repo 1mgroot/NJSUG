@@ -1,6 +1,3 @@
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-
 export function EventContent() {
   return (
     <div className="py-12 md:py-24 font-mono">
@@ -37,31 +34,6 @@ export function EventContent() {
               </h2>
             </div>
 
-            {/* Description */}
-            <div className='mt-4'>
-              <p className="text-lg">
-                The New Jersey SAS Users Group (NJSUG) invites you to join our 2025 Spring Meeting!
-                This event brings together SAS users, data analysts, and industry leaders to explore
-                the latest trends, best practices, and innovations in data analytics.
-              </p>
-            </div>
-
-            <div className='mt-4 text-white/50' >
-              <p className='text-lg font-bold'>Registration is now full, </p>
-              <p className='text-lg font-bold'>but we’d still love to have you!</p>
-              <p className='text-lg'>Join our waitlist and we’ll be in touch if a spot opens up.</p>
-            </div>
-
-            {/* Register Button */}
-            <div className='mt-4'>
-            <Button asChild variant='custom'>
-              <Link
-                href="https://forms.office.com/Pages/ResponsePage.aspx?id=WkDVRZWwDkKjyvM5Wus2VN9UuMwD-oRCuKj7WGJvRMRUOEozS0VYVDU3NVRTVjJNMFFYWDBIUEU3OS4u"
-              >
-                JOIN WAITLIST
-              </Link>
-            </Button>
-            </div>
 
           </div>
         </div>
