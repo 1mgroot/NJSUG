@@ -52,7 +52,7 @@ export function Committee() {
               <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                 <Image
                   src={member.image}
-                  alt={`${member.name} - ${member.role}`}
+                  alt={`${member.name} - ${member.company}`}
                   fill
                   className="object-cover"
                   sizes="128px"

@@ -1,5 +1,5 @@
 import { Navbar } from '@/components/Navbar'
-import { Button } from '@/components/ui/button'
+// import { Button } from '@/components/ui/button' // Temporarily commented out
 import { PastPhotos } from '@/components/PastPhotos'
 
 export default function Home() {
