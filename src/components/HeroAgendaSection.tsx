@@ -66,7 +66,7 @@ export function HeroAgendaSection() {
               <div className="mb-6 md:mb-8 flex justify-center">
                 <div className="relative">
                   <div className="absolute inset-0 bg-[radial-gradient(60%_140%_at_50%_50%,rgba(255,255,255,0.22)_0%,transparent_70%)] blur-md scale-110 opacity-60 transition-opacity duration-500 pointer-events-none"></div>
-                  <span className="relative inline-flex items-center gap-2 text-[clamp(1rem,1.6vw,1.3rem)] font-semibold text-white/90">
+                  <span className="relative inline-flex items-center gap-2 text-[clamp(1.15rem,2vw,1.6rem)] font-semibold text-white/90">
                     <div className="flex items-center gap-2">
                       <span className="size-2.5 rounded-full bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.6)]"></span>
                       <span className="bg-gradient-to-r from-white via-white/95 to-white/90 bg-clip-text text-transparent font-semibold tracking-wide">

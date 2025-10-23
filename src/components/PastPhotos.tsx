@@ -56,7 +56,7 @@ export function PastPhotos() {
     <section className="relative min-h-[50vh] md:min-h-[60vh] flex flex-col justify-center pt-4 pb-8 md:pt-6 md:pb-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-5 md:mb-8">
-          <h2 className="font-bold tracking-tight text-[clamp(1.25rem,3vw,2rem)] text-white/90">From past events</h2>
+          <h2 className="font-bold tracking-tight text-[clamp(1.25rem,3vw,2rem)] text-white/90">From Past Events</h2>
         </div>
 
         <div className="group space-y-6">
