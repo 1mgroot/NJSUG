@@ -25,14 +25,6 @@ const agendaItems: AgendaItem[] = [
   },
 ]
 
-function HeaderCell({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="text-sm md:text-[0.95rem] font-semibold tracking-wide text-white/90">
-      {children}
-    </div>
-  )
-}
-
 function BodyCell({ children }: { children: React.ReactNode }) {
   return <div className="text-white/90 text-sm md:text-base leading-relaxed">{children}</div>
 }

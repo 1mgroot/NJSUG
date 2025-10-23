@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#0A6F69] bg-cover bg-center bg-no-repeat text-white">
       <Navbar />
 
-      {/* Primary Hero: Upcoming Webinar (Apple-style minimal, immersive) */}
+      {/* Primary Hero: Upcoming Webinar */}
       <section className="relative isolate overflow-hidden min-h-[calc(100svh-64px)] md:min-h-[calc(100svh-72px)]">
         {/* Decorative radial gradients */}
         <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
@@ -26,7 +26,6 @@ export default function Home() {
 
         <div className="container mx-auto px-4 py-8 md:py-12 text-center flex items-center justify-center">
           <div className="mx-auto max-w-[clamp(40rem,60vw,64rem)]">
-            {/* Apple-style Coming Soon Badge */}
             <div className="mb-6 md:mb-8 flex justify-center">
               <div className="relative group">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/20 via-white/10 to-white/20 blur-md scale-110 opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
