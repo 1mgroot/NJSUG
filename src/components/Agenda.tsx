@@ -37,6 +37,10 @@ export function Agenda({ compact = false }: { compact?: boolean }) {
         <div className="pointer-events-none absolute inset-0 rounded-2xl bg-[radial-gradient(140%_100%_at_10%_-10%,rgba(255,255,255,0.22),transparent_45%),radial-gradient(100%_90%_at_90%_10%,rgba(255,255,255,0.12),transparent_40%)]" aria-hidden="true" />
 
         <div className={`relative ${compact ? 'p-4 md:p-5' : 'p-6 md:p-8'}`}>
+          {/* Agenda title */}
+          <div className="mb-4 md:mb-5">
+            <h2 className="text-lg md:text-xl font-semibold text-white tracking-wide">Agenda</h2>
+          </div>
 
           {/* body rows */}
           <div className="divide-y divide-white/10">
