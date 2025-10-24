@@ -1,57 +1,107 @@
 import { Navbar } from '@/components/Navbar'
-// import { Button } from '@/components/ui/button' // Temporarily commented out
 import { PastPhotos } from '@/components/PastPhotos'
+import HeroAgendaSection from '@/components/HeroAgendaSection'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "NJSUG 2025 Webinar - Automation | Statistical Programming Conference",
+  description: "Join NJSUG's 2025 Webinar on Automation on November 21, 2025. Learn about automation in statistical programming, SAS, R, Python, and data science from industry experts. Free registration available.",
+  keywords: [
+    "NJSUG 2025",
+    "automation webinar",
+    "statistical programming automation",
+    "SAS automation",
+    "R automation",
+    "Python automation",
+    "data science webinar",
+    "November 2025 webinar",
+    "free statistical programming event",
+    "biostatistics webinar"
+  ],
+  openGraph: {
+    title: "NJSUG 2025 Webinar - Automation",
+    description: "Join us on November 21, 2025 for an expert-led webinar on Automation in statistical programming.",
+    url: "https://www.njsug.org",
+    type: "website",
+    images: [
+      {
+        url: "/images/NJSUGBanner.svg",
+        width: 1200,
+        height: 630,
+        alt: "NJSUG 2025 Webinar - Automation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NJSUG 2025 Webinar - Automation",
+    description: "Join us on November 21, 2025 for an expert-led webinar on Automation in statistical programming.",
+    images: ["/images/NJSUGBanner.svg"],
+  },
+  alternates: {
+    canonical: "https://www.njsug.org",
+  },
+}
 
 export default function Home() {
+  // Structured Data (JSON-LD) for the event
+  const eventJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: 'NJSUG 2025 Webinar - Automation',
+    description: 'A webinar focused on automation in statistical programming, featuring expert speakers and industry insights.',
+    startDate: '2025-11-21T10:00:00-05:00',
+    endDate: '2025-11-21T11:00:00-05:00',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+    location: {
+      '@type': 'VirtualLocation',
+      url: 'https://events.teams.microsoft.com/event/f9e551e4-c281-41fc-a241-ee6189e210e9@b1c14d5c-3625-45b3-a430-9552373a0c2f'
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'NJSUG - New Jersey Statistical Users Group',
+      url: 'https://www.njsug.org'
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://events.teams.microsoft.com/event/f9e551e4-c281-41fc-a241-ee6189e210e9@b1c14d5c-3625-45b3-a430-9552373a0c2f',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2025-01-01T00:00:00-05:00'
+    },
+    image: 'https://www.njsug.org/images/NJSUGBanner.svg'
+  }
+
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'NJSUG - New Jersey Statistical Users Group',
+    url: 'https://www.njsug.org',
+    logo: 'https://www.njsug.org/images/NJSUGLogo.png',
+    description: 'A professional organization for statistical programmers and data scientists in New Jersey, focusing on SAS, R, Python, and statistical software.',
+    email: 'njsugcontact@gmail.com',
+    sameAs: [
+      'https://www.njsug.org'
+    ]
+  }
+
   return (
-    <main className="min-h-screen bg-[#0A6F69] bg-cover bg-center bg-no-repeat text-white">
-      <Navbar />
-
-      {/* Primary Hero: Upcoming Webinar (Apple-style minimal, immersive) */}
-      <section className="relative isolate overflow-hidden min-h-[calc(100svh-64px)] md:min-h-[calc(100svh-72px)]">
-        {/* Decorative radial gradients */}
-        <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-          <div className="absolute inset-0 bg-[radial-gradient(45vw_45vw_at_50%_20%,#DAFFA9_0%,transparent_60%)] opacity-30" />
-          <div className="absolute inset-0 bg-[radial-gradient(35vw_35vw_at_75%_65%,#00D1C1_0%,transparent_60%)] opacity-20" />
-        </div>
-
-        <div className="container mx-auto px-4 py-16 md:py-24 text-center flex items-center justify-center">
-          <div className="mx-auto max-w-4xl -translate-y-[2vh] md:-translate-y-[3vh]">
-            {/* Apple-style Coming Soon Badge */}
-            <div className="mb-8 flex justify-center">
-              <div className="relative group">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#DAFFA9]/30 via-[#00D1C1]/30 to-[#DAFFA9]/30 blur-lg scale-110 opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                <span className="relative inline-flex items-center gap-3 rounded-full bg-white/15 px-8 py-4 text-[clamp(1rem,1.6vw,1.3rem)] font-semibold text-white ring-2 ring-white/30 backdrop-blur-md shadow-2xl hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center gap-2">
-                    <span className="size-3 rounded-full bg-[#DAFFA9] animate-pulse shadow-lg shadow-[#DAFFA9]/50"></span>
-                    <span className="bg-gradient-to-r from-white via-white/95 to-white/90 bg-clip-text text-transparent font-bold tracking-wide">
-                      NJSUG 2025 Webinar
-                    </span>
-                  </div>
-                </span>
-              </div>
-            </div>
-
-            <h1 className="font-extrabold tracking-tight leading-[1.05] text-[clamp(2.5rem,7.5vw,5.5rem)]">
-              Automation
-            </h1>
-            <p className="mt-4 text-white/90 text-[clamp(1rem,2.2vw,1.5rem)]">
-              November 12, 2025
-            </p>
-
-            {/* Register button temporarily hidden */}
-            {/* <div className="mt-[clamp(1rem,4vh,2.5rem)] flex justify-center">
-              <Button variant="custom" size="lg" type="button" aria-label="Register for 2025 Webinar" className="px-[clamp(1.25rem,3vw,2rem)] py-[clamp(0.8rem,1.6vw,1.1rem)] text-[clamp(0.95rem,1.4vw,1.125rem)] rounded-xl shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)]">
-                Register
-              </Button>
-            </div> */}
-            <p className="mt-6 text-[clamp(0.8rem,1.1vw,0.95rem)] text-white/70">Schedule and speakers coming soon.</p>
-          </div>
-        </div>
-
-        {/* Bottom fade to blend into page background */}
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#0A6F69]" aria-hidden="true" />
-      </section>
+    <>
+      {/* Add structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      
+      <main className="min-h-screen bg-[#0A6F69] bg-cover bg-center bg-no-repeat text-white">
+        <Navbar />
+        <HeroAgendaSection />
 
       {/* Past Conferences - redesigned marquee */}
       <PastPhotos />
@@ -70,6 +120,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+      </main>
+    </>
   )
 }
