@@ -40,7 +40,10 @@ export function HeroAgendaSection() {
   }, [])
 
   return (
-    <section ref={wrapperRef} className="relative isolate overflow-hidden min-h-[calc(100svh-64px)] md:min-h-[calc(100svh-72px)]">
+    <section
+      ref={wrapperRef}
+      className="relative isolate overflow-hidden min-h-[calc(100svh-64px)] md:min-h-[calc(100svh-72px)] pb-20 md:pb-24"
+    >
       {/* Decorative radial gradients */}
       <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
         {/* top-down light */}
