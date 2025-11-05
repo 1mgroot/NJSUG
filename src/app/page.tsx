@@ -1,5 +1,6 @@
 import { Navbar } from '@/components/Navbar'
 import { PastPhotos } from '@/components/PastPhotos'
+import { MeetOurTeam } from '@/components/MeetOurTeam'
 import HeroAgendaSection from '@/components/HeroAgendaSection'
 import type { Metadata } from 'next'
 
@@ -102,6 +103,9 @@ export default function Home() {
       <main className="min-h-screen bg-[#0A6F69] bg-cover bg-center bg-no-repeat text-white">
         <Navbar />
         <HeroAgendaSection />
+
+      {/* Meet Our Team */}
+      <MeetOurTeam />
 
       {/* Past Conferences - redesigned marquee */}
       <PastPhotos />
