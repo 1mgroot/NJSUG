@@ -6,6 +6,8 @@ import { webinarAgendaItems } from '@/components/Agenda'
 import type { Metadata } from 'next'
 
 const SITE_URL = 'https://www.njsug.org'
+const REGISTRATION_URL =
+  'https://events.teams.microsoft.com/event/f9e551e4-c281-41fc-a241-ee6189e210e9@b1c14d5c-3625-45b3-a430-9552373a0c2f'
 
 const EVENT_KEYWORDS = [
   'NJSUG 2025',
@@ -59,9 +61,6 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const registrationUrl =
-    'https://events.teams.microsoft.com/event/f9e551e4-c281-41fc-a241-ee6189e210e9@b1c14d5c-3625-45b3-a430-9552373a0c2f'
-
   const teamMemberProfiles = webinarTeamMembers.map((member) => {
     const profile: Record<string, unknown> = {
       '@type': 'Person',
@@ -98,7 +97,7 @@ export default function Home() {
       eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
       location: {
         '@type': 'VirtualLocation',
-        url: registrationUrl,
+        url: REGISTRATION_URL,
       },
     }
 
@@ -124,7 +123,7 @@ export default function Home() {
     eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
     location: {
       '@type': 'VirtualLocation',
-      url: registrationUrl,
+      url: REGISTRATION_URL,
     },
     organizer: {
       '@type': 'Organization',
@@ -133,7 +132,7 @@ export default function Home() {
     },
     offers: {
       '@type': 'Offer',
-      url: registrationUrl,
+      url: REGISTRATION_URL,
       price: '0',
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
@@ -186,7 +185,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Add structured data */}
       {structuredDataSchemas.map((schema, index) => (
         <script
           key={`structured-data-${index}`}
@@ -198,18 +196,13 @@ export default function Home() {
       <main className="min-h-screen bg-[#0A6F69] bg-cover bg-center bg-no-repeat text-white">
         <Navbar />
         <HeroAgendaSection />
-
-        {/* Meet Our Team */}
         <MeetOurTeam />
-
-        {/* Past Conferences - redesigned marquee */}
         <PastPhotos />
 
-        {/* Contact Section */}
         <div id="contact" className="container mx-auto px-4 py-8 md:py-12">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <p className="mb-4 text-lg">
+              <p className="text-lg mb-4">
                 For more information about NJSUG events and how to get involved:
               </p>
               <p className="text-xl font-semibold">

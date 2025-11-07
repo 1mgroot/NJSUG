@@ -129,5 +129,3 @@ export function HeroAgendaSection() {
 }
 
 export default HeroAgendaSection
-
-
