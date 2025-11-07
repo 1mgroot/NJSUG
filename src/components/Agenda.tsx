@@ -1,18 +1,17 @@
 import React from 'react'
 
-interface AgendaItem {
+export interface AgendaItem {
   topic: string
   presenters: string
 }
 
-const agendaItems: AgendaItem[] = [
+export const webinarAgendaItems: AgendaItem[] = [
   {
     topic: 'Opening Remarks',
     presenters: 'Changhong Shi',
   },
   {
-    topic:
-      'Prompt, Program, Submit: Generative AI for Faster SDTM, ADaM, and TLFs',
+    topic: 'Prompt, Program, Submit: Generative AI for Faster SDTM, ADaM, and TLFs',
     presenters: 'Matt Becker',
   },
   {
@@ -44,7 +43,7 @@ export function Agenda({ compact = false }: { compact?: boolean }) {
 
           {/* body rows */}
           <div className="divide-y divide-white/10">
-            {agendaItems.map((item, idx) => (
+            {webinarAgendaItems.map((item, idx) => (
               <div
                 key={idx}
                 className={`grid grid-cols-1 gap-4 ${compact ? 'py-3 md:py-3.5' : 'py-4 md:py-5'}`}
@@ -68,5 +67,3 @@ export function Agenda({ compact = false }: { compact?: boolean }) {
 }
 
 export default Agenda
-
-
