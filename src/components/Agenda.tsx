@@ -1,11 +1,11 @@
 import React from 'react'
 
-interface AgendaItem {
+export interface AgendaItem {
   topic: string
   presenters: string
 }
 
-const agendaItems: AgendaItem[] = [
+export const webinarAgendaItems: AgendaItem[] = [
   {
     topic: 'Opening Remarks',
     presenters: 'Changhong Shi',
@@ -24,6 +24,8 @@ const agendaItems: AgendaItem[] = [
     presenters: 'Jeff Xia & Junze Zhang',
   },
 ]
+
+const agendaItems = webinarAgendaItems
 
 function BodyCell({ children }: { children: React.ReactNode }) {
   return <div className="text-white/90 text-sm md:text-base leading-relaxed">{children}</div>

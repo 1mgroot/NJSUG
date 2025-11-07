@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-type TeamMember = {
+export type TeamMember = {
   name: string
   company: string
   image?: string
   focus?: string
 }
 
-const teamMembers: TeamMember[] = [
+export const webinarTeamMembers: TeamMember[] = [
   {
     name: 'Changhong Shi',
     company: 'Merck',
@@ -21,7 +21,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Junze Zhang',
     company: 'Merck',
-    image: '/images/2025WebinarTeam/Junze.png',
+    image: '/images/2025WebinarTeam/Junze.JPG',
   },
   {
     name: 'Vijay Sharma',
@@ -36,9 +36,12 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Madhusudhan Ginnaram',
     company: 'Merck',
+    image: '/images/2025WebinarTeam/madhu_photo.png',
   },
 
 ]
+
+const teamMembers = webinarTeamMembers
 
 export function MeetOurTeam() {
   return (

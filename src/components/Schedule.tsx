@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 
-interface ScheduleItem {
+export interface ScheduleItem {
   time: string;
   title: string;
   speaker?: string;
@@ -8,7 +8,7 @@ interface ScheduleItem {
   isBreak?: boolean;
 }
 
-const scheduleData: ScheduleItem[] = [
+export const springMeetingSchedule: ScheduleItem[] = [
   { time: '8:30 am – 9:00 am', title: 'Doors Open / Registration' },
   { time: '9:00 am – 9:15 am', title: 'Opening Remarks', speaker: 'Changhong Shi, Merck' },
   { time: '9:15 am – 10:00 am', title: 'SAS®, SQL, R, and Python: We\'re All Friends', speaker: 'Melodie Rush, SAS' },
@@ -19,6 +19,8 @@ const scheduleData: ScheduleItem[] = [
   { time: '11:55 am – 12:00 pm', title: 'Closing', speaker: 'Jeff Xia, Merck' },
   { time: '12:00 pm – 1:00 pm', title: 'Lunch and Networking' },
 ];
+
+const scheduleData = springMeetingSchedule;
 
 const ScheduleItem = React.memo(({ item }: { item: ScheduleItem }) => (
   <div

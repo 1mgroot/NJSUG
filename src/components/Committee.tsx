@@ -1,12 +1,12 @@
 import Image from 'next/image'
 
-interface CommitteeMember {
+export interface CommitteeMember {
   name: string
   company: string
   image: string
 }
 
-const committeeMembers: CommitteeMember[] = [
+export const springMeetingCommitteeMembers: CommitteeMember[] = [
   {
     name: 'Changhong Shi',
     company: 'Merck',
@@ -29,6 +29,8 @@ const committeeMembers: CommitteeMember[] = [
   }
 
 ]
+
+const committeeMembers = springMeetingCommitteeMembers
 
 export function Committee() {
   return (
