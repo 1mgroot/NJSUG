@@ -4,6 +4,11 @@ import { notFound } from 'next/navigation'
 
 import { Navbar } from '@/components/Navbar'
 import { legacyArchivePages } from '@/lib/legacyArchiveData'
+import {
+  getLegacyArchiveStaticParams,
+  resolveLegacyArchiveSlug,
+  toLegacyArchivePublicSlug,
+} from '@/lib/legacyArchiveSlugs'
 
 const SITE_URL = 'https://www.njsug.org'
 
@@ -14,29 +19,32 @@ type ArchiveDetailPageProps = {
 }
 
 export function generateStaticParams() {
-  return Object.keys(legacyArchivePages).map((slug) => ({ slug }))
+  return getLegacyArchiveStaticParams()
 }
 
 export async function generateMetadata({ params }: ArchiveDetailPageProps): Promise<Metadata> {
   const { slug } = await params
-  const page = legacyArchivePages[slug as keyof typeof legacyArchivePages]
+  const resolvedSlug = resolveLegacyArchiveSlug(slug)
 
-  if (!page) {
+  if (!resolvedSlug) {
     return {
       title: 'Archive Detail Not Found',
     }
   }
 
+  const page = legacyArchivePages[resolvedSlug]
+  const canonicalSlug = toLegacyArchivePublicSlug(resolvedSlug)
+
   return {
     title: page.title,
     description: `Archived NJSUG presentation details for ${page.title}.`,
     alternates: {
-      canonical: `${SITE_URL}/archive/${slug}`,
+      canonical: `${SITE_URL}/archive/${canonicalSlug}`,
     },
     openGraph: {
       title: `${page.title} | NJSUG Archive`,
       description: `Archived NJSUG presentation details for ${page.title}.`,
-      url: `${SITE_URL}/archive/${slug}`,
+      url: `${SITE_URL}/archive/${canonicalSlug}`,
       type: 'article',
       siteName: 'NJSUG - New Jersey Statistical Users Group',
       locale: 'en_US',
@@ -46,11 +54,13 @@ export async function generateMetadata({ params }: ArchiveDetailPageProps): Prom
 
 export default async function ArchiveDetailPage({ params }: ArchiveDetailPageProps) {
   const { slug } = await params
-  const page = legacyArchivePages[slug as keyof typeof legacyArchivePages]
+  const resolvedSlug = resolveLegacyArchiveSlug(slug)
 
-  if (!page) {
+  if (!resolvedSlug) {
     notFound()
   }
+
+  const page = legacyArchivePages[resolvedSlug]
 
   return (
     <main className="min-h-screen bg-[#007A73] text-white">

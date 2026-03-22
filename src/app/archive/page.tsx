@@ -8,6 +8,7 @@ import { Navbar } from '@/components/Navbar'
 import { SPRING_MEETING_ARCHIVE_PATH } from '@/components/SpringMeetingArchivePage'
 import { WEBINAR_ARCHIVE_PATH } from '@/components/WebinarArchivePage'
 import { springMeetingSchedule } from '@/components/Schedule'
+import { toLegacyArchivePublicSlug } from '@/lib/legacyArchiveSlugs'
 
 const SITE_URL = 'https://www.njsug.org'
 const ARCHIVE_URL = `${SITE_URL}/archive`
@@ -37,7 +38,8 @@ const springMeetingHighlights = springMeetingSchedule.filter((item) => {
 
 const archiveDetailLink = (path: string) => {
   const [file, hash] = path.split('#')
-  return hash ? `/archive/${file}#${hash}` : `/archive/${file}`
+  const publicSlug = toLegacyArchivePublicSlug(file)
+  return hash ? `/archive/${publicSlug}#${hash}` : `/archive/${publicSlug}`
 }
 const archiveLinkClass =
   'font-medium text-emerald-100 underline decoration-white/30 underline-offset-4 transition hover:text-white hover:decoration-white'
