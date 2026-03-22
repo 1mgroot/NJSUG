@@ -1,43 +1,23 @@
-import { Navbar } from '@/components/Navbar'
-import { PastPhotos } from '@/components/PastPhotos'
-import { MeetOurTeam, webinarTeamMembers } from '@/components/MeetOurTeam'
-import HeroAgendaSection from '@/components/HeroAgendaSection'
-import { webinarAgendaItems } from '@/components/Agenda'
 import type { Metadata } from 'next'
+import Link from 'next/link'
+
+import { Navbar } from '@/components/Navbar'
+import { WEBINAR_ARCHIVE_PATH } from '@/components/WebinarArchivePage'
 
 const SITE_URL = 'https://www.njsug.org'
-const REGISTRATION_URL =
-  'https://events.teams.microsoft.com/event/f9e551e4-c281-41fc-a241-ee6189e210e9@b1c14d5c-3625-45b3-a430-9552373a0c2f'
-
-const EVENT_KEYWORDS = [
-  'NJSUG 2025',
-  'automation webinar',
-  'statistical programming automation',
-  'SAS automation',
-  'R automation',
-  'Python automation',
-  'data science webinar',
-  'November 2025 webinar',
-  'free statistical programming event',
-  'biostatistics webinar',
-  'NJSUG leadership team',
-  'Merck statistical programming community',
-  'pharmaceutical analytics meetup',
-]
 
 export const metadata: Metadata = {
-  title: 'NJSUG 2025 Webinar - Automation | Statistical Programming Conference',
+  title: 'NJSUG | Homepage Refresh in Progress',
   description:
-    "Join NJSUG's 2025 Webinar on Automation on November 21, 2025. Learn about automation in statistical programming, SAS, R, Python, and data science from industry experts. Free registration available.",
-  keywords: EVENT_KEYWORDS,
-  category: 'Event',
+    'The NJSUG homepage is being refreshed. Visit the archive to browse recent events including the NJSUG 2025 Webinar and Spring Meeting.',
+  category: 'Organization',
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: 'NJSUG 2025 Webinar - Automation',
+    title: 'NJSUG | Homepage Refresh in Progress',
     description:
-      'Join us on November 21, 2025 for an expert-led webinar on Automation in statistical programming.',
+      'The NJSUG homepage is being refreshed. Visit the archive to browse recent events and presentations.',
     url: SITE_URL,
     type: 'website',
     siteName: 'NJSUG - New Jersey Statistical Users Group',
@@ -47,106 +27,20 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/NJSUGBanner.svg`,
         width: 1200,
         height: 630,
-        alt: 'NJSUG 2025 Webinar - Automation',
+        alt: 'NJSUG homepage refresh in progress',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NJSUG 2025 Webinar - Automation',
+    title: 'NJSUG | Homepage Refresh in Progress',
     description:
-      'Join us on November 21, 2025 for an expert-led webinar on Automation in statistical programming.',
+      'The NJSUG homepage is being refreshed. Visit the archive to browse recent events and presentations.',
     images: [`${SITE_URL}/images/NJSUGBanner.svg`],
   },
 }
 
 export default function Home() {
-  const teamMemberProfiles = webinarTeamMembers.map((member) => {
-    const profile: Record<string, unknown> = {
-      '@type': 'Person',
-      name: member.name,
-      jobTitle: member.focus ?? 'NJSUG 2025 Webinar Organizing Team',
-      affiliation: {
-        '@type': 'Organization',
-        name: member.company,
-      },
-      memberOf: {
-        '@type': 'Organization',
-        name: 'NJSUG - New Jersey Statistical Users Group',
-        url: SITE_URL,
-      },
-    }
-
-    if (member.image) {
-      profile.image = `${SITE_URL}${member.image}`
-    }
-
-    return profile
-  })
-
-  const agendaSubEvents = webinarAgendaItems.map((item) => {
-    const presenters = item.presenters
-      .split(/,|&|and/gi)
-      .map((name) => name.trim())
-      .filter(Boolean)
-
-    const subEvent: Record<string, unknown> = {
-      '@type': 'Event',
-      name: item.topic,
-      description: item.topic,
-      eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
-      location: {
-        '@type': 'VirtualLocation',
-        url: REGISTRATION_URL,
-      },
-    }
-
-    if (presenters.length) {
-      subEvent.performer = presenters.map((name) => ({
-        '@type': 'Person',
-        name,
-      }))
-    }
-
-    return subEvent
-  })
-
-  const eventJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: 'NJSUG 2025 Webinar - Automation',
-    description:
-      'A webinar focused on automation in statistical programming, featuring expert speakers and industry insights.',
-    startDate: '2025-11-21T10:00:00-05:00',
-    endDate: '2025-11-21T11:00:00-05:00',
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
-    location: {
-      '@type': 'VirtualLocation',
-      url: REGISTRATION_URL,
-    },
-    organizer: {
-      '@type': 'Organization',
-      name: 'NJSUG - New Jersey Statistical Users Group',
-      url: SITE_URL,
-    },
-    offers: {
-      '@type': 'Offer',
-      url: REGISTRATION_URL,
-      price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2025-01-01T00:00:00-05:00',
-    },
-    audience: {
-      '@type': 'Audience',
-      audienceType: 'Statistical programmers, data scientists, and biostatisticians',
-    },
-    keywords: EVENT_KEYWORDS.join(', '),
-    image: `${SITE_URL}/images/NJSUGBanner.svg`,
-    subEvent: agendaSubEvents,
-  }
-
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -157,31 +51,24 @@ export default function Home() {
       'A professional organization for statistical programmers and data scientists in New Jersey, focusing on SAS, R, Python, and statistical software.',
     email: 'njsugcontact@gmail.com',
     sameAs: [SITE_URL],
-    member: teamMemberProfiles,
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        contactType: 'Event information',
+        contactType: 'General inquiries',
         email: 'njsugcontact@gmail.com',
         availableLanguage: ['English'],
       },
     ],
   }
 
-  const breadcrumbJsonLd = {
+  const websiteJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: SITE_URL,
-      },
-    ],
+    '@type': 'WebSite',
+    name: 'NJSUG - New Jersey Statistical Users Group',
+    url: SITE_URL,
   }
 
-  const structuredDataSchemas = [eventJsonLd, organizationJsonLd, breadcrumbJsonLd]
+  const structuredDataSchemas = [organizationJsonLd, websiteJsonLd]
 
   return (
     <>
@@ -193,24 +80,56 @@ export default function Home() {
         />
       ))}
 
-      <main className="min-h-screen bg-[#0A6F69] bg-cover bg-center bg-no-repeat text-white">
+      <main className="min-h-screen bg-[#0A6F69] text-white">
         <Navbar />
-        <HeroAgendaSection />
-        <MeetOurTeam />
-        <PastPhotos />
 
-        <div id="contact" className="container mx-auto px-4 py-8 md:py-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-              <p className="text-lg mb-4">
-                For more information about NJSUG events and how to get involved:
-              </p>
-              <p className="text-xl font-semibold">
-                Contact us at: <span className="text-yellow-300">njsugcontact@gmail.com</span>
-              </p>
+        <section className="container mx-auto px-4 pb-20 pt-10 md:pb-24 md:pt-16">
+          <div className="mx-auto max-w-5xl rounded-[2rem] border border-white/15 bg-white/10 p-8 shadow-2xl shadow-black/10 backdrop-blur-sm md:p-12">
+            <p className="text-sm uppercase tracking-[0.3em] text-emerald-100/80">
+              Homepage Refresh
+            </p>
+            <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
+              A new NJSUG home page is on the way.
+            </h1>
+            <p className="mt-6 max-w-3xl text-base leading-8 text-emerald-50/90 md:text-lg">
+              We&apos;re rebuilding the main landing page. In the meantime, the
+              current event content has been preserved in the archive so visitors
+              can still access recent NJSUG programs.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/archive"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+              >
+                Open Archive
+              </Link>
+              <Link
+                href={WEBINAR_ARCHIVE_PATH}
+                className="inline-flex items-center justify-center rounded-full border border-emerald-200/25 bg-emerald-300/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-300/15"
+              >
+                View NJSUG 2025 Webinar
+              </Link>
+            </div>
+
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              <div className="rounded-3xl border border-white/10 bg-black/10 p-6">
+                <h2 className="text-xl font-semibold text-white">What&apos;s Available Now</h2>
+                <p className="mt-3 text-sm leading-7 text-emerald-50/85">
+                  The archive includes the NJSUG 2025 Webinar, the NJSUG 2025
+                  Spring Meeting, and the legacy presentation collection.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-black/10 p-6">
+                <h2 className="text-xl font-semibold text-white">Contact</h2>
+                <p className="mt-3 text-sm leading-7 text-emerald-50/85">
+                  For more information about NJSUG events and how to get involved,
+                  email <span className="text-yellow-300">njsugcontact@gmail.com</span>.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </>
   )

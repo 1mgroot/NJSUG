@@ -120,3 +120,70 @@
     @apply bg-background text-foreground;
   }
 }
+
+.legacy-archive-content {
+  line-height: 1.75;
+}
+
+.legacy-archive-content h2,
+.legacy-archive-content h3 {
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.legacy-archive-content h2 {
+  margin-top: 2rem;
+  font-size: 1.75rem;
+}
+
+.legacy-archive-content h2:first-child {
+  margin-top: 0;
+}
+
+.legacy-archive-content h3 {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.legacy-archive-content p,
+.legacy-archive-content ul,
+.legacy-archive-content ol {
+  margin-top: 1rem;
+  color: #334155;
+}
+
+.legacy-archive-content ul,
+.legacy-archive-content ol {
+  padding-left: 1.5rem;
+}
+
+.legacy-archive-content a {
+  color: #0f766e;
+  text-decoration: underline;
+  text-decoration-color: rgb(15 118 110 / 0.35);
+  text-underline-offset: 0.2em;
+}
+
+.legacy-archive-content a:hover {
+  color: #115e59;
+  text-decoration-color: rgb(17 94 89 / 0.65);
+}
+
+.legacy-archive-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.legacy-archive-content table {
+  width: 100%;
+}
+
+.legacy-archive-content .container {
+  margin-top: 2rem;
+}
+
+.legacy-archive-content .container:first-child {
+  margin-top: 0;
+}

@@ -24,11 +24,11 @@ export function Navbar() {
             >
               Home
             </Link>
-            <Link 
-              href="/past-conferences" 
+            <Link
+              href="/archive"
               className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
             >
-              Past Conferences
+              Archive
             </Link>
           </div>
         </div>
