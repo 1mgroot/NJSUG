@@ -17,7 +17,7 @@ export function Navbar() {
               />
             </Link>
           </div>
-          <div className="flex space-x-8">
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
             <Link 
               href="/" 
               className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
@@ -29,6 +29,18 @@ export function Navbar() {
               className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
             >
               Archive
+            </Link>
+            <Link
+              href="/steering-committee"
+              className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
+            >
+              Steering Committee
+            </Link>
+            <Link
+              href="/charter"
+              className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
+            >
+              Charter
             </Link>
           </div>
         </div>
