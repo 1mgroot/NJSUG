@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       "Explore highlights from NJSUG's 2025 Spring Meeting featuring expert speakers on statistical programming and data science.",
     url: SPRING_MEETING_ARCHIVE_URL,
     type: 'article',
-    siteName: 'NJSUG - New Jersey Statistical Users Group',
+    siteName: 'NJSUG - New Jersey Area SAS Users Group',
     locale: 'en_US',
     images: [
       {

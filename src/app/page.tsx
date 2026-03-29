@@ -71,12 +71,12 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: 'NJSUG - New Jersey Statistical Users Group',
+    title: 'NJSUG - New Jersey Area SAS Users Group',
     description:
       'Join NJSUG for webinars, meetings, and community learning around SAS, statistical programming, and related analytics tools.',
     url: SITE_URL,
     type: 'website',
-    siteName: 'NJSUG - New Jersey Statistical Users Group',
+    siteName: 'NJSUG - New Jersey Area SAS Users Group',
     locale: 'en_US',
     images: [
       {
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NJSUG - New Jersey Statistical Users Group',
+    title: 'NJSUG - New Jersey Area SAS Users Group',
     description:
       'Join NJSUG for webinars, meetings, and community learning around SAS, statistical programming, and related analytics tools.',
     images: [`${SITE_URL}/images/NJSUGBanner.svg`],
@@ -100,7 +100,7 @@ export default function Home() {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'NJSUG - New Jersey Statistical Users Group',
+    name: 'NJSUG - New Jersey Area SAS Users Group',
     url: SITE_URL,
     logo: `${SITE_URL}/images/NJSUGLogo.png`,
     description:
@@ -120,7 +120,7 @@ export default function Home() {
   const websiteJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'NJSUG - New Jersey Statistical Users Group',
+    name: 'NJSUG - New Jersey Area SAS Users Group',
     url: SITE_URL,
   }
 

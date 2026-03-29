@@ -63,7 +63,7 @@ export const metadata: Metadata = {
       'Read the amended NJSUG charter, including the organization purpose, governance, membership, meetings, events, and amendment process.',
     url: CHARTER_URL,
     type: 'website',
-    siteName: 'NJSUG - New Jersey Statistical Users Group',
+    siteName: 'NJSUG - New Jersey Area SAS Users Group',
     locale: 'en_US',
   },
   twitter: {

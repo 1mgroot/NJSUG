@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       'Meet the NJSUG Steering Committee members supporting events, programs, and community engagement.',
     url: STEERING_COMMITTEE_URL,
     type: 'website',
-    siteName: 'NJSUG - New Jersey Statistical Users Group',
+    siteName: 'NJSUG - New Jersey Area SAS Users Group',
     locale: 'en_US',
   },
   twitter: {

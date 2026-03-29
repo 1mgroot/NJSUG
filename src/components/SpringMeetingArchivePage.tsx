@@ -118,7 +118,7 @@ export function getSpringMeetingStructuredData() {
     location: eventLocation,
     organizer: {
       '@type': 'Organization',
-      name: 'NJSUG - New Jersey Statistical Users Group',
+      name: 'NJSUG - New Jersey Area SAS Users Group',
       url: SITE_URL,
     },
     image: `${SITE_URL}/images/event-photos/Group_1.jpg`,
