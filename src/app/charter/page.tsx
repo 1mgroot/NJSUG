@@ -14,40 +14,38 @@ const charterSections: CharterSection[] = [
   {
     title: 'Purpose',
     paragraphs: [
-      'The New Jersey SAS Users Group (NJSUG) is an independent, volunteer-led professional organization founded in 1998 that supports individuals and organizations in New Jersey who work with SAS software and other statistical software. NJSUG brings together people from industry, academia, and other sectors with an interest in statistical programming, data analytics, and data-driven reporting.',
-      'NJSUG fosters learning and collaboration within the New Jersey SAS user community by creating opportunities to share practical experience, discuss analytical approaches, and encourage the effective use of SAS and other analytical tools, including open-source technologies. This mission is advanced through conferences, educational meetings, webinars, and other community activities.',
-      'NJSUG functions as an officially recognized SAS users group while operating independently from the SAS Institute.',
+      'The New Jersey Area SAS Users Group (NJSUG) is a non-profit, independent, and volunteer-based professional organization that brings together individuals in New Jersey and New York who are interested in SAS software.',
+      'Our primary objective is to provide a forum to share knowledge, exchange ideas, and promote best practices about using SAS software and integrating SAS with other open-source tools for data analysis and reporting.',
+      'NJSUG operates as an official SAS users group while maintaining its independence from SAS Institute.',
     ],
   },
   {
     title: 'Governance',
     paragraphs: [
-      'NJSUG is guided by a Steering Committee composed of volunteer members who provide continuity, coordination, and oversight for group activities. The Steering Committee is responsible for planning and organizing meetings and events, supporting educational initiatives, and representing NJSUG within the broader SAS user community.',
+      "NJSUG is governed by an Executive Committee comprised of volunteer members from different industries. The Committee is responsible for overseeing the organization's functioning and growth, meeting monthly or as needed.",
+      'All members serve two-year terms or ad-hoc arrangements to bring fresh perspectives and ideas.',
       'Steering Committee members are selected through a nomination and voting process conducted among current Steering Committee members. Individuals may be nominated based on prior contributions to NJSUG activities and contributions to the New Jersey SAS user community through technical expertise, content development, or event planning. Nominations are discussed internally and confirmed through voting to support continuity and effective operation of the organization. Steering Committee membership is reviewed periodically.',
     ],
   },
   {
     title: 'Membership',
     paragraphs: [
-      'Membership is open to anyone in New Jersey or nearby areas with an interest in SAS software or other open-source technologies. Members are encouraged to participate in group activities, attend meetings or webinars, and contribute to the community. No formal dues are required unless approved by the leadership team to cover specific group activities.',
+      'Membership in NJSUG is open to anyone who is interested in SAS software in the New Jersey and New York area.',
+      'Members can attend webinars and meetings without additional fees. Membership dues may be collected annually or as approved by the Executive Committee.',
     ],
   },
   {
     title: 'Meetings and Events',
     paragraphs: [
-      'NJSUG shall host regular meetings to advance its purpose. Events may include in-person meetings, webinars, workshops, training sessions, and social mixers. The frequency of events will be determined by member interest and leadership capacity, with the goal of offering meaningful content throughout the year.',
+      'NJSUG typically offers one in-person meeting and one online webinar per year.',
+      'Additional online webinars and other activities, such as training classes, may be organized to meet the needs and interests of members.',
     ],
   },
   {
-    title: 'Finances',
+    title: 'Amendments to the Charter',
     paragraphs: [
-      'Any funds collected for NJSUG activities shall be used transparently to support the mission. These might include costs for venue space, refreshments, speaker incentives, or educational resources. The leadership team will provide a summary of how funds are used if such funds are collected.',
-    ],
-  },
-  {
-    title: 'Amendments',
-    paragraphs: [
-      'This charter may be amended by a proposal from any member and approval by the leadership team. Amendments should align with the purpose and best interests of NJSUG and be communicated to members once adopted.',
+      'Amendments to this charter may be proposed by any member of NJSUG.',
+      'Proposed amendments will be reviewed by the Executive Committee, and approval requires a majority vote of the Committee members.',
     ],
   },
 ]
@@ -55,14 +53,14 @@ const charterSections: CharterSection[] = [
 export const metadata: Metadata = {
   title: 'Charter',
   description:
-    'Read the NJSUG charter, including the organization purpose, governance, membership, events, finances, and amendment process.',
+    'Read the amended NJSUG charter, including the organization purpose, governance, membership, meetings, events, and amendment process.',
   alternates: {
     canonical: CHARTER_URL,
   },
   openGraph: {
     title: 'NJSUG Charter',
     description:
-      'Read the NJSUG charter, including the organization purpose, governance, membership, events, finances, and amendment process.',
+      'Read the amended NJSUG charter, including the organization purpose, governance, membership, meetings, events, and amendment process.',
     url: CHARTER_URL,
     type: 'website',
     siteName: 'NJSUG - New Jersey Statistical Users Group',
@@ -72,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'NJSUG Charter',
     description:
-      'Read the NJSUG charter, including the organization purpose, governance, membership, events, finances, and amendment process.',
+      'Read the amended NJSUG charter, including the organization purpose, governance, membership, meetings, events, and amendment process.',
   },
 }
 
@@ -87,12 +85,12 @@ export default function CharterPage() {
             Governing Document
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-            NJSUG Charter
+            New Jersey Area SAS Users Group Charter
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-8 text-emerald-50/90 md:text-lg">
-            This page reflects the current NJSUG charter and summarizes how the
-            organization defines its purpose, leadership structure, membership,
-            events, finances, and amendment process.
+            This page reflects the NJSUG charter and summarizes the
+            organization's purpose, governance model, membership, event cadence,
+            and amendment process.
           </p>
         </div>
 

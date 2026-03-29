@@ -28,42 +28,56 @@ export const springMeetingCommitteeMembers: CommitteeMember[] = [
     company: 'Merck',
     image: '/images/committee/Junze.png',
   },
+  {
+    name: 'Chen Ling',
+    company: 'AbbVie',
+    image: '/images/committee/photo_Chen_Ling.png',
+  },
 ]
 
 export const steeringCommitteeMembers: CommitteeMember[] = [
   {
     name: 'Junze Zhang',
+    company: 'Merck',
     image: '/images/lastest_committee/Junze.JPG',
   },
   {
     name: 'Changhong Shi',
+    company: 'Merck',
     image: '/images/lastest_committee/Changhong Shi.jpg',
   },
   {
     name: 'Jeff Xia',
+    company: 'Merck',
     image: '/images/lastest_committee/jeff-xia-2024-1.jpg',
   },
   {
     name: 'Chen Ling',
+    company: 'AbbVie',
     image: '/images/lastest_committee/photo_Chen_Ling.png',
   },
   {
     name: 'Madhusudhan Ginnaram',
+    company: 'Merck',
     image: '/images/lastest_committee/madhu_photo.png',
   },
   {
     name: 'Vijay Sharma',
+    company: 'Bristol Myers Squibb',
     image: '/images/lastest_committee/Vijay Headshot Pic.JPG',
   },
   {
     name: 'Amy Zhang',
+    company: 'Merck',
     image: '/images/lastest_committee/Amy Zhang.jpeg',
   },
   {
     name: 'Feiyang Du',
+    company: 'Merck',
   },
   {
     name: 'Sarah Alavi',
+    company: 'Merck',
   },
 ]
 
@@ -117,6 +131,11 @@ export function Committee() {
               <h3 className="text-xl font-semibold text-white mb-2">
                 {member.name}
               </h3>
+              {member.company ? (
+                <p className="mb-2 text-sm font-medium uppercase tracking-wide text-white/70">
+                  {member.company}
+                </p>
+              ) : null}
 
               {!member.image ? (
                 <p className="text-sm text-white/70">Photo coming soon</p>

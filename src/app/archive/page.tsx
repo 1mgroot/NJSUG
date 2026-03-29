@@ -622,7 +622,51 @@ export default function ArchivePage() {
             </p>
           </div>
 
-          <section className="mt-8 rounded-[2rem] border border-white/15 bg-white/8 p-6 shadow-lg shadow-black/10 backdrop-blur-sm md:mt-10 md:p-8">
+          <section className="mt-8 rounded-[2rem] border border-white/15 bg-white/8 p-6 shadow-lg shadow-black/10 backdrop-blur-sm md:p-8">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+              <div className="max-w-2xl">
+                <p className="text-sm uppercase tracking-[0.24em] text-emerald-100/70">
+                  Recent Event Archive
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold text-white">
+                  NJSUG 2025 Webinar
+                </h2>
+                <p className="mt-3 text-base leading-7 text-emerald-50/85">
+                  The former home page has been preserved as an archive page for
+                  our November 21, 2025 webinar on automation, including the full
+                  event overview, agenda, organizing team, and photos.
+                </p>
+                <Link
+                  href={WEBINAR_ARCHIVE_PATH}
+                  className="mt-5 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/15"
+                >
+                  Open Event Page
+                </Link>
+              </div>
+
+              <div className="min-w-0 flex-1 rounded-3xl border border-white/10 bg-black/10 p-5">
+                <h3 className="text-lg font-semibold text-white">Agenda Highlights</h3>
+                <ul className="mt-4 space-y-3">
+                  {webinarAgendaItems.map((item) => (
+                    <li
+                      key={item.topic}
+                      className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
+                    >
+                      <p className="text-sm font-medium leading-6 text-white/95">
+                        {item.topic}
+                      </p>
+                      <p className="mt-1 text-sm leading-6 text-emerald-100/80">
+                        {item.presenters}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+
+
+          <section className="mt-8 rounded-[2rem] border border-white/15 bg-white/8 p-6 shadow-lg shadow-black/10 backdrop-blur-sm md:p-8">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
               <div className="max-w-2xl">
                 <p className="text-sm uppercase tracking-[0.24em] text-emerald-100/70">
@@ -664,49 +708,6 @@ export default function ArchivePage() {
                     >
                       <p className="text-sm font-medium leading-6 text-white/95">
                         {item.title}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <section className="mt-8 rounded-[2rem] border border-white/15 bg-white/8 p-6 shadow-lg shadow-black/10 backdrop-blur-sm md:p-8">
-            <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-              <div className="max-w-2xl">
-                <p className="text-sm uppercase tracking-[0.24em] text-emerald-100/70">
-                  Recent Event Archive
-                </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
-                  NJSUG 2025 Webinar
-                </h2>
-                <p className="mt-3 text-base leading-7 text-emerald-50/85">
-                  The former home page has been preserved as an archive page for
-                  our November 21, 2025 webinar on automation, including the full
-                  event overview, agenda, organizing team, and photos.
-                </p>
-                <Link
-                  href={WEBINAR_ARCHIVE_PATH}
-                  className="mt-5 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/15"
-                >
-                  Open Event Page
-                </Link>
-              </div>
-
-              <div className="min-w-0 flex-1 rounded-3xl border border-white/10 bg-black/10 p-5">
-                <h3 className="text-lg font-semibold text-white">Agenda Highlights</h3>
-                <ul className="mt-4 space-y-3">
-                  {webinarAgendaItems.map((item) => (
-                    <li
-                      key={item.topic}
-                      className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3"
-                    >
-                      <p className="text-sm font-medium leading-6 text-white/95">
-                        {item.topic}
-                      </p>
-                      <p className="mt-1 text-sm leading-6 text-emerald-100/80">
-                        {item.presenters}
                       </p>
                     </li>
                   ))}
