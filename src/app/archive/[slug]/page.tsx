@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: ArchiveDetailPageProps): Prom
       description: `Archived NJSUG presentation details for ${page.title}.`,
       url: `${SITE_URL}/archive/${canonicalSlug}`,
       type: 'article',
-      siteName: 'NJSUG - New Jersey Area SAS Users Group',
+      siteName: 'NJSUG - New Jersey SAS Users Group',
       locale: 'en_US',
     },
   }

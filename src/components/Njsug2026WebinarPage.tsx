@@ -58,7 +58,7 @@ export const WEBINAR_2026_KEYWORDS = [
   'Bartosz Jabłoński',
   'May 2026 webinar',
   'online statistical programming event',
-  'New Jersey Area SAS Users Group',
+  'New Jersey SAS Users Group',
 ]
 
 export function getNjsug2026WebinarMetadata(): Metadata {
@@ -77,7 +77,7 @@ export function getNjsug2026WebinarMetadata(): Metadata {
         'Join the NJSUG 2026 Webinar on May 8, 2026 for sessions from Danny Modlin and Bartosz Jabłoński.',
       url: WEBINAR_2026_URL,
       type: 'website',
-      siteName: 'NJSUG - New Jersey Area SAS Users Group',
+      siteName: 'NJSUG - New Jersey SAS Users Group',
       locale: 'en_US',
       images: [
         {
@@ -136,7 +136,7 @@ export function getNjsug2026WebinarStructuredData() {
     },
     organizer: {
       '@type': 'Organization',
-      name: 'NJSUG - New Jersey Area SAS Users Group',
+      name: 'NJSUG - New Jersey SAS Users Group',
       url: SITE_URL,
     },
     offers: {

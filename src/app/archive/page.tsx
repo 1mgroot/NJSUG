@@ -589,7 +589,7 @@ export const metadata: Metadata = {
       'Browse the NJSUG archive of past presentations, including the NJSUG 2025 Webinar, the NJSUG 2025 Spring Meeting, and legacy meetings from 1998 through 2013.',
     url: ARCHIVE_URL,
     type: 'website',
-    siteName: 'NJSUG - New Jersey Area SAS Users Group',
+    siteName: 'NJSUG - New Jersey SAS Users Group',
     locale: 'en_US',
   },
   twitter: {

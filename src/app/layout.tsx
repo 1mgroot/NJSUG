@@ -4,13 +4,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.njsug.org'),
   title: {
-    default: "NJSUG - New Jersey Area SAS Users Group",
+    default: "NJSUG - New Jersey SAS Users Group",
     template: "%s | NJSUG"
   },
   description: "Join NJSUG for expert-led seminars, webinars, and conferences on statistical programming, SAS, R, Python, and data science. Connect with pharmaceutical and biotech professionals in New Jersey.",
   keywords: [
     "NJSUG",
-    "New Jersey Area SAS Users Group",
+    "New Jersey SAS Users Group",
     "statistical programming",
     "SAS programming",
     "R programming",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.njsug.org",
-    siteName: "NJSUG - New Jersey Area SAS Users Group",
-    title: "NJSUG - New Jersey Area SAS Users Group",
+    siteName: "NJSUG - New Jersey SAS Users Group",
+    title: "NJSUG - New Jersey SAS Users Group",
     description: "Join NJSUG for expert-led seminars, webinars, and conferences on statistical programming, SAS, R, Python, and data science.",
     images: [
       {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NJSUG - New Jersey Area SAS Users Group",
+    title: "NJSUG - New Jersey SAS Users Group",
     description: "Join NJSUG for expert-led seminars, webinars, and conferences on statistical programming, SAS, R, Python, and data science.",
     images: ["/images/NJSUGLogo.png"],
   },

@@ -14,7 +14,7 @@ const charterSections: CharterSection[] = [
   {
     title: 'Purpose',
     paragraphs: [
-      'The New Jersey Area SAS Users Group (NJSUG) is a non-profit, independent, and volunteer-based professional organization that brings together individuals in New Jersey and New York who are interested in SAS software.',
+      'The New Jersey SAS Users Group (NJSUG) is a non-profit, independent, and volunteer-based professional organization that brings together individuals in New Jersey and New York who are interested in SAS software.',
       'Our primary objective is to provide a forum to share knowledge, exchange ideas, and promote best practices about using SAS software and integrating SAS with other open-source tools for data analysis and reporting.',
       'NJSUG operates as an official SAS users group while maintaining its independence from SAS Institute.',
     ],
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
       'Read the amended NJSUG charter, including the organization purpose, governance, membership, meetings, events, and amendment process.',
     url: CHARTER_URL,
     type: 'website',
-    siteName: 'NJSUG - New Jersey Area SAS Users Group',
+    siteName: 'NJSUG - New Jersey SAS Users Group',
     locale: 'en_US',
   },
   twitter: {
@@ -85,7 +85,7 @@ export default function CharterPage() {
             Governing Document
           </p>
           <h1 className="mt-4 text-4xl font-semibold tracking-tight md:text-6xl">
-            New Jersey Area SAS Users Group Charter
+            New Jersey SAS Users Group Charter
           </h1>
           <p className="mt-6 max-w-3xl text-base leading-8 text-emerald-50/90 md:text-lg">
             This page reflects the NJSUG charter and summarizes the

@@ -45,7 +45,7 @@ export function getWebinarArchiveMetadata(): Metadata {
         'Explore the archived NJSUG webinar from November 21, 2025 on automation in statistical programming.',
       url: WEBINAR_ARCHIVE_URL,
       type: 'website',
-      siteName: 'NJSUG - New Jersey Area SAS Users Group',
+      siteName: 'NJSUG - New Jersey SAS Users Group',
       locale: 'en_US',
       images: [
         {
@@ -78,7 +78,7 @@ export function getWebinarStructuredData() {
       },
       memberOf: {
         '@type': 'Organization',
-        name: 'NJSUG - New Jersey Area SAS Users Group',
+        name: 'NJSUG - New Jersey SAS Users Group',
         url: SITE_URL,
       },
     }
@@ -133,7 +133,7 @@ export function getWebinarStructuredData() {
     },
     organizer: {
       '@type': 'Organization',
-      name: 'NJSUG - New Jersey Area SAS Users Group',
+      name: 'NJSUG - New Jersey SAS Users Group',
       url: SITE_URL,
     },
     offers: {
@@ -157,7 +157,7 @@ export function getWebinarStructuredData() {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'NJSUG - New Jersey Area SAS Users Group',
+    name: 'NJSUG - New Jersey SAS Users Group',
     url: SITE_URL,
     logo: `${SITE_URL}/images/NJSUGLogo.png`,
     description:
