@@ -84,7 +84,7 @@ export const steeringCommitteeMembers: CommitteeMember[] = [
 export const pastSteeringCommitteeMembers: CommitteeMember[] = [
   {
     name: 'Chen Wang',
-    note: 'Steering Committee member (2025)',
+    note: 'Steering Committee member (2024 and 2025)',
     image: '/images/committee/Chen Wang.jpg',
   },
 ]

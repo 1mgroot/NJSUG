@@ -12,29 +12,6 @@ import { WEBINAR_ARCHIVE_PATH } from '@/components/WebinarArchivePage'
 
 const SITE_URL = 'https://www.njsug.org'
 
-const quickLinks = [
-  {
-    title: 'Events',
-    description: 'See upcoming NJSUG programs, including the 2026 webinar.',
-    href: '/events',
-  },
-  {
-    title: 'Archive',
-    description: 'Browse recent meetings, webinars, and legacy presentation materials.',
-    href: '/archive',
-  },
-  {
-    title: 'Charter',
-    description: 'Read the group charter, purpose, governance, and membership approach.',
-    href: '/charter',
-  },
-  {
-    title: 'Steering Committee',
-    description: 'Meet the volunteers helping guide NJSUG programs and community efforts.',
-    href: '/steering-committee',
-  },
-]
-
 const recentPrograms = [
   {
     title: 'NJSUG 2026 Webinar',
@@ -234,23 +211,6 @@ export default function Home() {
                 </div>
               </aside>
             </div>
-          </div>
-        </section>
-
-        <section className="container mx-auto px-4 pb-8">
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {quickLinks.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                className="rounded-3xl border border-white/12 bg-white/8 p-6 shadow-lg shadow-black/10 backdrop-blur-sm transition hover:bg-white/12"
-              >
-                <h2 className="text-xl font-semibold text-white">{item.title}</h2>
-                <p className="mt-3 text-sm leading-7 text-emerald-50/85">
-                  {item.description}
-                </p>
-              </Link>
-            ))}
           </div>
         </section>
 

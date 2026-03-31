@@ -58,6 +58,12 @@ export function Navbar() {
             >
               Charter
             </Link>
+            <Link
+              href="/contact"
+              className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
