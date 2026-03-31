@@ -31,7 +31,7 @@ function Row({ reverse = false }: { reverse?: boolean }) {
     <div className="relative overflow-hidden">
       <div className={`marquee-track flex items-center gap-6 ${reverse ? 'animate-marquee-right' : 'animate-marquee-left'}`}>
         {sequence.map((p, idx) => (
-          <Link key={`${p.id}-${idx}`} href="/past-conferences" className="relative h-36 w-64 md:h-44 md:w-80 lg:h-52 lg:w-88 flex-shrink-0 rounded-xl overflow-hidden border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
+          <Link key={`${p.id}-${idx}`} href="/archive/njsug-2025-spring-meeting" className="relative h-36 w-64 md:h-44 md:w-80 lg:h-52 lg:w-88 flex-shrink-0 rounded-xl overflow-hidden border border-white/10 bg-white/5 hover:border-white/20 transition-all duration-300">
             <Image
               src={p.src}
               alt={p.alt}
