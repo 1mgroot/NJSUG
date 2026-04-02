@@ -79,6 +79,7 @@ export const steeringCommitteeMembers: CommitteeMember[] = [
   {
     name: 'Sarah Alavi',
     company: 'Merck',
+    image: '/images/lastest_committee/sarah.jpg',
   },
 ]
 
