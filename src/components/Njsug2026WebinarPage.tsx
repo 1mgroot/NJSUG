@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import { Navbar } from '@/components/Navbar'
@@ -19,6 +20,20 @@ type AgendaItem = {
   abstract?: string
 }
 
+type SpeakerProfile = {
+  displayName: string
+  name: string
+  affiliation: string
+  talkTitle: string
+  time: string
+  abstract: string
+  bio: string[]
+  image: {
+    src: string
+    alt: string
+  }
+}
+
 const agendaItems: AgendaItem[] = [
   {
     time: '10:00 AM - 10:05 AM ET',
@@ -36,7 +51,7 @@ const agendaItems: AgendaItem[] = [
   {
     time: '10:35 AM - 11:35 AM ET',
     title: 'La petite SAS package - a workshop about the "Hello World" SAS package.',
-    presenter: 'Bartosz Jabłoński',
+    presenter: 'Bartosz "Bart" Jab\u0142o\u0144ski',
     affiliation: 'yabwon',
     abstract:
       'This presentation will introduce the idea of SAS packages and answer questions such as what they are, what kinds of jobs they can be used for, and how they can benefit users. Since this session is workshop based, it will also include a demonstration showing how easy it is to get started with SAS packages and build one.',
@@ -48,6 +63,43 @@ const agendaItems: AgendaItem[] = [
   },
 ]
 
+const speakerProfiles: SpeakerProfile[] = [
+  {
+    displayName: 'Danny Modlin',
+    name: 'Danny Modlin',
+    affiliation: 'SAS',
+    talkTitle: 'PROC PPF - Past, Present, Future',
+    time: '10:05 AM - 10:35 AM ET',
+    abstract:
+      'As SAS celebrates its 50th anniversary, take a moment to consider the past, present, and future of statistical programming. In this presentation, look back at our roots, the SAS procedural programming language, reminisce over graphical user interfaces that changed the way we interact with code, and look to the future where AI tools assist with our programming based on an iterative, back-and-forth conversation with SAS copilots.',
+    bio: [
+      'Danny Modlin is a Senior Analytical Training Consultant at SAS world headquarters in Cary, North Carolina. Since starting at SAS in 2011, Danny has taught and developed courses that span many areas of statistics and SAS platforms, with a specialization in the application of Bayesian analyses. Danny received his Bachelor of Science in Mathematics from Elon College (now Elon University), a Masters of Mathematics from the University of North Carolina at Wilmington, and a Masters of Statistics from North Carolina State University.',
+      "Prior to his time at SAS, Danny was a mathematics, statistics, and computer science teacher at the middle school, high school, and collegiate levels. Outside of SAS, Danny's interests include local sports and meteorology.",
+    ],
+    image: {
+      src: '/images/2026-webinar/danny-modlin.jpg',
+      alt: 'Portrait of Danny Modlin',
+    },
+  },
+  {
+    displayName: 'Bartosz Jab\u0142o\u0144ski',
+    name: 'Bartosz "Bart" Jab\u0142o\u0144ski',
+    affiliation: 'yabwon',
+    talkTitle: 'La petite SAS package - a workshop about the "Hello World" SAS package.',
+    time: '10:35 AM - 11:35 AM ET',
+    abstract:
+      'This presentation will introduce the idea of SAS packages and answer questions such as what they are, what kinds of jobs they can be used for, and how they can benefit users. Since this session is workshop based, it will also include a demonstration showing how easy it is to get started with SAS packages and build one.',
+    bio: [
+      'Bartosz "Bart" Jab\u0142o\u0144ski is a consultant, SAS educator, and longtime analytics professional with experience across higher education, telecommunications, clinical trials, and banking. A seasoned SAS programmer since 2009, he has taught SAS Programming at the Faculty of Mathematics and Information Science at Warsaw University of Technology since 2015.',
+      'Bart is also a frequent speaker at local and international SAS conferences and the author and developer of the SAS Packages Framework, a practical code-sharing framework for SAS. He is an active member of the Polish SAS Users Group (PolSUG) and is widely known for his hands-on, problem-solving approach to SAS programming.',
+    ],
+    image: {
+      src: '/images/2026-webinar/bartosz-jablonski.jpeg',
+      alt: 'Portrait of Bartosz "Bart" Jab\u0142o\u0144ski',
+    },
+  },
+]
+
 export const WEBINAR_2026_KEYWORDS = [
   'NJSUG 2026 webinar',
   'Future of Statistical Programming',
@@ -55,7 +107,7 @@ export const WEBINAR_2026_KEYWORDS = [
   'SAS webinar',
   'SAS packages',
   'Danny Modlin',
-  'Bartosz Jabłoński',
+  'Bartosz Jab\u0142o\u0144ski',
   'May 2026 webinar',
   'online statistical programming event',
   'New Jersey SAS Users Group',
@@ -65,7 +117,7 @@ export function getNjsug2026WebinarMetadata(): Metadata {
   return {
     title: 'NJSUG 2026 Webinar - Future of Statistical Programming',
     description:
-      'Register for the NJSUG 2026 Webinar on May 8, 2026 featuring Danny Modlin and Bartosz Jabłoński on the future of statistical programming, SAS, and SAS packages.',
+      'Register for the NJSUG 2026 Webinar on May 8, 2026 featuring Danny Modlin and Bartosz Jab\u0142o\u0144ski on the future of statistical programming, SAS, and SAS packages.',
     keywords: WEBINAR_2026_KEYWORDS,
     category: 'Event',
     alternates: {
@@ -74,7 +126,7 @@ export function getNjsug2026WebinarMetadata(): Metadata {
     openGraph: {
       title: 'NJSUG 2026 Webinar - Future of Statistical Programming',
       description:
-        'Join the NJSUG 2026 Webinar on May 8, 2026 for sessions from Danny Modlin and Bartosz Jabłoński.',
+        'Join the NJSUG 2026 Webinar on May 8, 2026 for sessions from Danny Modlin and Bartosz Jab\u0142o\u0144ski.',
       url: WEBINAR_2026_URL,
       type: 'website',
       siteName: 'NJSUG - New Jersey SAS Users Group',
@@ -92,7 +144,7 @@ export function getNjsug2026WebinarMetadata(): Metadata {
       card: 'summary_large_image',
       title: 'NJSUG 2026 Webinar - Future of Statistical Programming',
       description:
-        'Join the NJSUG 2026 Webinar on May 8, 2026 for sessions from Danny Modlin and Bartosz Jabłoński.',
+        'Join the NJSUG 2026 Webinar on May 8, 2026 for sessions from Danny Modlin and Bartosz Jab\u0142o\u0144ski.',
       images: [`${SITE_URL}/images/NJSUGBanner.svg`],
     },
   }
@@ -125,7 +177,7 @@ export function getNjsug2026WebinarStructuredData() {
     '@type': 'Event',
     name: 'NJSUG 2026 Webinar - Future of Statistical Programming',
     description:
-      'An online NJSUG webinar exploring the future of statistical programming with sessions from Danny Modlin and Bartosz Jabłoński.',
+      'An online NJSUG webinar exploring the future of statistical programming with sessions from Danny Modlin and Bartosz Jab\u0142o\u0144ski.',
     startDate: WEBINAR_2026_START,
     endDate: WEBINAR_2026_END,
     eventStatus: 'https://schema.org/EventScheduled',
@@ -235,7 +287,7 @@ export function Njsug2026WebinarPage() {
                     Future of Statistical Programming
                   </h1>
                   <p className="mt-3 md:mt-4 text-white/90 text-[clamp(0.95rem,1.9vw,1.35rem)]">
-                    Fri, May 8, 2026 · 10:00 AM - 11:40 AM ET
+                    Fri, May 8, 2026 | 10:00 AM - 11:40 AM ET
                   </p>
 
                   <div className="mt-[clamp(0.75rem,3vh,1.75rem)] flex justify-center">
@@ -257,7 +309,7 @@ export function Njsug2026WebinarPage() {
                 </div>
               </div>
 
-              <div className="mx-auto px-4 md:px-8 mt-6 w-full flex justify-center">
+              <div className="mx-auto mt-6 flex w-full justify-center px-4 md:px-8">
                 <div className="w-full max-w-[clamp(60rem,92vw,100rem)]">
                   <div className="relative mx-auto w-full max-w-[clamp(48rem,78vw,80rem)] text-left">
                     <div className="relative rounded-xl bg-white/12 ring-1 ring-white/20 backdrop-blur-md shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)]">
@@ -284,10 +336,10 @@ export function Njsug2026WebinarPage() {
                                   <div className="font-semibold text-white text-[0.98rem]">
                                     {item.title}
                                   </div>
-                                  <div className="text-white/70 mt-1 text-[0.9rem]">
+                                  <div className="mt-1 text-[0.9rem] text-white/70">
                                     {item.presenter}
                                   </div>
-                                  <div className="text-white/60 mt-1 text-[0.84rem]">
+                                  <div className="mt-1 text-[0.84rem] text-white/60">
                                     {item.time}
                                   </div>
                                 </div>
@@ -303,46 +355,69 @@ export function Njsug2026WebinarPage() {
             </div>
           </div>
 
-          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 md:h-20 bg-gradient-to-b from-transparent to-[#0A6F69]" aria-hidden="true" />
+          <div
+            className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 md:h-20 bg-gradient-to-b from-transparent to-[#0A6F69]"
+            aria-hidden="true"
+          />
         </section>
 
         <section className="container mx-auto px-4 pb-20">
-          <div className="mx-auto max-w-5xl">
+          <div className="mx-auto max-w-6xl">
             <div className="rounded-[2rem] border border-white/15 bg-white/8 p-6 shadow-lg shadow-black/10 backdrop-blur-sm md:p-8">
               <div className="max-w-3xl">
                 <p className="text-sm uppercase tracking-[0.24em] text-emerald-100/70">
-                  Session Details
+                  Speakers
                 </p>
-                <h2 className="mt-3 text-3xl font-semibold text-white">
-                  Speaker Lineup
-                </h2>
+                <h2 className="mt-3 text-3xl font-semibold text-white">Speaker Lineup</h2>
               </div>
 
-              <div className="mt-8 space-y-4">
-                {agendaItems.filter((item) => item.abstract).map((item) => (
+              <div className="mt-8 space-y-6">
+                {speakerProfiles.map((speaker) => (
                   <article
-                    key={`${item.time}-${item.title}`}
-                    className="rounded-3xl border border-white/10 bg-black/10 p-6"
+                    key={speaker.name}
+                    className="overflow-hidden rounded-3xl border border-white/10 bg-black/10"
                   >
-                    <p className="text-sm uppercase tracking-[0.18em] text-emerald-100/65">
-                      {item.time}
-                    </p>
-                    <h3 className="mt-3 text-2xl font-semibold text-white">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm font-medium uppercase tracking-wide text-white/65">
-                      {item.presenter}
-                    </p>
-                    {item.affiliation ? (
-                      <p className="mt-1 text-sm font-medium uppercase tracking-wide text-emerald-100/70">
-                        {item.affiliation}
-                      </p>
-                    ) : null}
-                    {item.abstract ? (
-                      <p className="mt-4 text-base leading-8 text-emerald-50/90">
-                        {item.abstract}
-                      </p>
-                    ) : null}
+                    <div className="grid h-full gap-6 p-6 md:grid-cols-[160px_minmax(0,1fr)] md:items-start">
+                      <div className="flex justify-center md:justify-start">
+                        <div className="relative h-40 w-40 overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-[0_18px_40px_-24px_rgba(0,0,0,0.65)]">
+                          <Image
+                            src={speaker.image.src}
+                            alt={speaker.image.alt}
+                            fill
+                            sizes="160px"
+                            className="object-cover object-top"
+                          />
+                        </div>
+                      </div>
+
+                      <div>
+                        <p className="text-sm uppercase tracking-[0.18em] text-emerald-100/65">
+                          {speaker.time}
+                        </p>
+                        <h3 className="mt-3 text-2xl font-semibold text-white">
+                          {speaker.talkTitle}
+                        </h3>
+                        <p className="mt-2 text-sm font-medium uppercase tracking-wide text-white/65">
+                          {speaker.displayName}
+                        </p>
+                        <p className="text-sm uppercase tracking-[0.18em] text-emerald-100/65">
+                          {speaker.affiliation}
+                        </p>
+                        <p className="mt-4 text-base leading-8 text-emerald-50/90">
+                          {speaker.abstract}
+                        </p>
+                        <div className="mt-6 border-t border-white/10 pt-6">
+                          <p className="text-sm uppercase tracking-[0.18em] text-emerald-100/65">
+                            Presenter Bio
+                          </p>
+                        </div>
+                        <div className="mt-4 space-y-4 text-base leading-8 text-emerald-50/90">
+                          {speaker.bio.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </article>
                 ))}
               </div>
