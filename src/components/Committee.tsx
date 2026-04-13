@@ -37,53 +37,53 @@ export const springMeetingCommitteeMembers: CommitteeMember[] = [
 
 export const steeringCommitteeMembers: CommitteeMember[] = [
   {
-    name: 'Junze Zhang',
-    company: 'Merck',
-    image: '/images/lastest_committee/Junze.JPG',
-  },
-  {
-    name: 'Changhong Shi',
-    company: 'Merck',
-    image: '/images/lastest_committee/Changhong Shi.jpg',
-  },
-  {
-    name: 'Jeff Xia',
-    company: 'Merck',
-    image: '/images/lastest_committee/jeff-xia-2024-1.jpg',
-  },
-  {
-    name: 'Chen Ling',
-    company: 'AbbVie',
-    image: '/images/lastest_committee/photo_Chen_Ling.png',
-  },
-  {
-    name: 'Madhusudhan Ginnaram',
-    company: 'Merck',
-    image: '/images/lastest_committee/madhu_photo.png',
-  },
-  {
-    name: 'Vijay Sharma',
-    company: 'Bristol Myers Squibb',
-    image: '/images/lastest_committee/Vijay Headshot Pic.JPG',
-  },
-  {
     name: 'Amy Zhang',
-    company: 'Merck',
+    company: 'Marketing Director',
     image: '/images/lastest_committee/Amy Zhang.jpeg',
   },
   {
+    name: 'Chen Ling',
+    company: 'Technical Director',
+    image: '/images/lastest_committee/photo_Chen_Ling.png',
+  },
+  {
     name: 'Feiyang Du',
-    company: 'Merck',
+    company: 'Platforms Director',
     image: '/images/lastest_committee/Feiyang Du.jpeg',
   },
   {
+    name: 'Junze Zhang',
+    company: 'President',
+    image: '/images/lastest_committee/Junze.JPG',
+  },
+  {
+    name: 'Madhusudhan Ginnaram',
+    company: 'Vice President',
+    image: '/images/lastest_committee/madhu_photo.png',
+  },
+  {
     name: 'Sarah Alavi',
-    company: 'Merck',
+    company: 'Communication Director',
     image: '/images/lastest_committee/sarah.jpg',
+  },
+  {
+    name: 'Vijay Sharma',
+    company: 'Scientific Committee Director',
+    image: '/images/lastest_committee/Vijay Headshot Pic.JPG',
   },
 ]
 
 export const pastSteeringCommitteeMembers: CommitteeMember[] = [
+  {
+    name: 'Changhong Shi',
+    note: 'Steering Committee member (2024 and 2025)',
+    image: '/images/lastest_committee/Changhong Shi.jpg',
+  },
+  {
+    name: 'Jeff Xia',
+    note: 'Steering Committee member (2024 and 2025)',
+    image: '/images/lastest_committee/jeff-xia-2024-1.jpg',
+  },
   {
     name: 'Chen Wang',
     note: 'Steering Committee member (2024 and 2025)',
@@ -149,7 +149,7 @@ export function Committee() {
         <details className="mx-auto mt-10 max-w-6xl rounded-3xl border border-white/15 bg-black/10 p-6 text-white">
           <summary className="cursor-pointer list-none text-lg font-semibold marker:hidden">
             <span className="inline-flex items-center gap-3">
-              <span>Past Steering Committee Members</span>
+              <span>Emeritus Steering Committee Members</span>
               <span className="text-sm font-normal text-white/65">Click to expand</span>
             </span>
           </summary>
