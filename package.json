@@ -2,6 +2,14 @@
   "name": "njsug",
   "version": "0.1.0",
   "private": true,
+  "maintainers": [
+    {
+      "name": "Junze Zhang"
+    },
+    {
+      "name": "Chen Ling"
+    }
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
