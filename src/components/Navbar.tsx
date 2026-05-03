@@ -59,6 +59,12 @@ export function Navbar() {
               Charter
             </Link>
             <Link
+              href="/join-mailing-list"
+              className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
+            >
+              Join Mailing List
+            </Link>
+            <Link
               href="/contact"
               className="text-white hover:text-gray-200 transition-colors duration-200 font-medium"
             >

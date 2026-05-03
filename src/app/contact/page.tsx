@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+
 import { Navbar } from '@/components/Navbar'
 
 const SITE_URL = 'https://www.njsug.org'
@@ -58,6 +60,22 @@ export default function ContactPage() {
               >
                 {CONTACT_EMAIL}
               </a>
+            </div>
+
+            <div className="mt-8 border-t border-white/10 pt-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-emerald-100/65">
+                Mailing List
+              </p>
+              <p className="mt-3 text-base leading-7 text-emerald-50/85">
+                Receive NJSUG announcements about upcoming events and community
+                programming.
+              </p>
+              <Link
+                href="/join-mailing-list"
+                className="mt-5 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+              >
+                Join Mailing List
+              </Link>
             </div>
           </div>
         </div>

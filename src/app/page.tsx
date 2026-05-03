@@ -150,6 +150,12 @@ export default function Home() {
                     View Next Event
                   </Link>
                   <Link
+                    href="/join-mailing-list"
+                    className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+                  >
+                    Join Mailing List
+                  </Link>
+                  <Link
                     href="/archive"
                     className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
                   >
@@ -306,9 +312,23 @@ export default function Home() {
           <div className="mx-auto max-w-4xl rounded-[2rem] border border-white/15 bg-black/10 p-8 text-center shadow-lg shadow-black/10 backdrop-blur-sm md:p-10">
             <h2 className="text-3xl font-semibold text-white">Stay Connected</h2>
             <p className="mt-4 text-base leading-8 text-emerald-50/90 md:text-lg">
-              For more information about NJSUG events and how to get involved,
-              contact us at <span className="text-yellow-300">njsugcontact@gmail.com</span>.
+              Join the NJSUG mailing list for event announcements, community updates,
+              and future programming news.
             </p>
+            <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                href="/join-mailing-list"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+              >
+                Join Mailing List
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
+              >
+                Contact NJSUG
+              </Link>
+            </div>
           </div>
         </section>
       </main>
