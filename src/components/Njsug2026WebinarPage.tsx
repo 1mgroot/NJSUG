@@ -50,7 +50,7 @@ const agendaItems: AgendaItem[] = [
   },
   {
     time: '10:35 AM - 11:35 AM ET',
-    title: 'La petite SAS package - a workshop about the "Hello World" SAS package.',
+    title: 'Le petit SAS package - a workshop about the "Hello World" SAS package.',
     presenter: 'Bartosz "Bart" Jab\u0142o\u0144ski',
     affiliation: 'yabwon',
     abstract:
@@ -85,7 +85,7 @@ const speakerProfiles: SpeakerProfile[] = [
     displayName: 'Bartosz Jab\u0142o\u0144ski',
     name: 'Bartosz "Bart" Jab\u0142o\u0144ski',
     affiliation: 'yabwon',
-    talkTitle: 'La petite SAS package - a workshop about the "Hello World" SAS package.',
+    talkTitle: 'Le petit SAS package - a workshop about the "Hello World" SAS package.',
     time: '10:35 AM - 11:35 AM ET',
     abstract:
       'This presentation will introduce the idea of SAS packages and answer questions such as what they are, what kinds of jobs they can be used for, and how they can benefit users. Since this session is workshop based, it will also include a demonstration showing how easy it is to get started with SAS packages and build one.',
