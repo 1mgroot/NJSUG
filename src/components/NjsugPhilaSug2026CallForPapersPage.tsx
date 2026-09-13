@@ -78,7 +78,7 @@ const agendaItems: AgendaItem[] = [
     time: '10:35–11:05 AM',
     title:
       'YAMAA: a language-agnostic YAML schema to map and derive CDISC data from ODM to SDTM and ADaM',
-    speaker: 'Yilong Zhang (Independent)',
+    speaker: 'Yilong Zhang (New York University)',
   },
   { time: '11:05–11:15 AM', title: 'Break', kind: 'break' },
   {
