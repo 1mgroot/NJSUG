@@ -1,18 +1,16 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Send, UserPlus } from 'lucide-react'
+import { ArrowRight, UserPlus } from 'lucide-react'
 
 import { Navbar } from '@/components/Navbar'
 import {
-  CFP_ABSTRACT_DEADLINE,
   CFP_EVENT_COST,
   CFP_EVENT_DATE,
   CFP_LOCATION_NAME,
   CFP_PATH,
   CFP_REGISTRATION_DEADLINE,
   CFP_REGISTRATION_URL,
-  CFP_SUBMISSION_URL,
 } from '@/components/NjsugPhilaSug2026CallForPapersPage'
 import {
   WEBINAR_2026_PATH,
@@ -157,7 +155,7 @@ export default function Home() {
                     href={CFP_PATH}
                     className="inline-flex items-center justify-center rounded-full border border-emerald-200/25 bg-emerald-300/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-emerald-300/15"
                   >
-                    View Call for Papers
+                    View Event Details
                   </Link>
                   <Link
                     href="/join-mailing-list"
@@ -176,7 +174,7 @@ export default function Home() {
 
               <aside className="rounded-[2rem] border border-white/15 bg-black/10 p-6 shadow-xl shadow-black/10 backdrop-blur-sm md:p-8">
                 <p className="text-sm uppercase tracking-[0.24em] text-emerald-100/70">
-                  Call for Papers
+                  Upcoming Event
                 </p>
                 <h2 className="mt-3 text-3xl font-semibold text-white">
                   NJSUG &amp; PhilaSUG Joint In-Person Meeting 2026
@@ -211,14 +209,6 @@ export default function Home() {
                   </div>
                   <div className="py-4">
                     <dt className="text-xs uppercase tracking-[0.2em] text-emerald-100/65">
-                      Abstracts Due
-                    </dt>
-                    <dd className="mt-2 text-base font-semibold text-white">
-                      {CFP_ABSTRACT_DEADLINE}
-                    </dd>
-                  </div>
-                  <div className="py-4">
-                    <dt className="text-xs uppercase tracking-[0.2em] text-emerald-100/65">
                       Registration Due
                     </dt>
                     <dd className="mt-2 text-base font-semibold text-white">
@@ -237,20 +227,11 @@ export default function Home() {
                     <UserPlus className="mr-2 size-4" aria-hidden="true" />
                     Register for Free
                   </a>
-                  <a
-                    href={CFP_SUBMISSION_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15"
-                  >
-                    <Send className="mr-2 size-4" aria-hidden="true" />
-                    Submit Abstract
-                  </a>
                   <Link
                     href={CFP_PATH}
                     className="inline-flex items-center justify-center rounded-full border border-white/10 bg-black/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
                   >
-                    Call Details
+                    Event Details
                     <ArrowRight className="ml-2 size-4" aria-hidden="true" />
                   </Link>
                 </div>
