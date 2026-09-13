@@ -98,11 +98,11 @@ const agendaItems: AgendaItem[] = [
     title:
       'Panel Discussion: Innovation and Technology Strategy for Statistical Programming',
     participants: [
-      'Ryan Yu — Director, Statistical Programming (Regeneron)',
+      'Ryan Yu — Director, Head of Scientific Computing Technology (Regeneron)',
       'Changhong Shi — Executive Director, Statistical Programming (Merck)',
       'Sangeeta Bhattacharya — Senior Director, Clinical & Statistical Programming; Head, Immunology & Medical Affairs (Johnson & Johnson)',
       'Matthew Cohen — Director of Technical Services (Wharton Research Data Services, University of Pennsylvania)',
-      'Moderator: Krutika Parvatikar — Statistical Programming Scientist (Merck)',
+      'Moderator: Krutika Parvatikar — Senior Statistical Programming Scientist (Merck)',
     ],
   },
   { time: '2:05–2:15 PM', title: 'Break', kind: 'break' },
