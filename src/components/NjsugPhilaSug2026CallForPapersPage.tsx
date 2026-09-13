@@ -61,6 +61,7 @@ type AgendaItem = {
   title: string
   speaker?: string
   description?: string
+  participants?: string[]
   kind?: 'break'
 }
 
@@ -69,25 +70,53 @@ const agendaItems: AgendaItem[] = [
   { time: '9:30–9:35 AM', title: 'Opening' },
   {
     time: '9:35–10:35 AM',
-    title: 'Keynote: Working with the SAS® Extension for Visual Studio Code',
+    title:
+      'Keynote from SAS — Working with the SAS® Extension for SAS® Visual Studio Code',
     speaker: 'Rob Collum (SAS)',
   },
-  { time: '10:35–11:05 AM', title: 'Presentation', speaker: 'Yilong' },
+  {
+    time: '10:35–11:05 AM',
+    title:
+      'YAMAA: a language-agnostic YAML schema to map and derive CDISC data from ODM to SDTM and ADaM',
+    speaker: 'Yilong Zhang (Independent)',
+  },
   { time: '11:05–11:15 AM', title: 'Break', kind: 'break' },
-  { time: '11:15–11:35 AM', title: 'Presentation', speaker: 'Cara' },
-  { time: '11:35 AM–12:05 PM', title: 'Presentation', speaker: 'Charles' },
+  {
+    time: '11:15–11:35 AM',
+    title: 'Loading SAS Datasets from CSV Without Truncation',
+    speaker: 'Cara Cuiule (Wharton Research Data Services, The Wharton School)',
+  },
+  {
+    time: '11:35 AM–12:05 PM',
+    title:
+      'A demonstration of ProcClinSafe®, a SAS based Safety Surveillance Reporting Software',
+    speaker: 'Charles E. B. Jones, PhD (Pi Epsilon Statistical Consulting, LLC)',
+  },
   { time: '12:05–1:15 PM', title: 'Lunch Break', kind: 'break' },
   {
     time: '1:15–2:05 PM',
-    title: 'Panel Discussion',
-    speaker:
-      'Ryan Yu (Regeneron), Changhong Shi (Merck), Sangeeta Bhattacharya (J&J), and Matthew Cohen (UPenn)',
-    description:
-      'Innovation and Technology Strategy for Statistical Programming. Moderated by Krutika Parvatikar (Merck).',
+    title:
+      'Panel Discussion: Innovation and Technology Strategy for Statistical Programming',
+    participants: [
+      'Ryan Yu — Director, Statistical Programming (Regeneron)',
+      'Changhong Shi — Executive Director, Statistical Programming (Merck)',
+      'Sangeeta Bhattacharya — Senior Director, Clinical & Statistical Programming; Head, Immunology & Medical Affairs (Johnson & Johnson)',
+      'Matthew Cohen — Director of Technical Services (Wharton Research Data Services, University of Pennsylvania)',
+      'Moderator: Krutika Parvatikar — Statistical Programming Scientist (Merck)',
+    ],
   },
   { time: '2:05–2:15 PM', title: 'Break', kind: 'break' },
-  { time: '2:15–2:45 PM', title: 'Presentation', speaker: 'Jay' },
-  { time: '2:45–3:15 PM', title: 'Presentation', speaker: 'Kevin' },
+  {
+    time: '2:15–2:45 PM',
+    title: 'SAS® Programming Techniques for Efficiency and Code Optimization',
+    speaker: 'Jay Iyengar (Data Systems Consultants LLC)',
+  },
+  {
+    time: '2:45–3:15 PM',
+    title:
+      'SKILL.md + SAS: Turning Clinical Programming SOPs into Executable AI Workflows',
+    speaker: 'Kevin Lee (Clinvia)',
+  },
   { time: '3:15–3:25 PM', title: 'Closing and Pictures' },
 ]
 
@@ -421,6 +450,13 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                       <p className="mt-2 text-sm leading-6 text-slate-600">
                         {item.description}
                       </p>
+                    ) : null}
+                    {item.participants ? (
+                      <ul className="mt-3 space-y-1.5 text-sm leading-6 text-slate-700">
+                        {item.participants.map((participant) => (
+                          <li key={participant}>{participant}</li>
+                        ))}
+                      </ul>
                     ) : null}
                   </div>
                 </li>
