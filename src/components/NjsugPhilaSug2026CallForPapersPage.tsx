@@ -484,10 +484,6 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                   clinical programmers, and analytics professionals for a day of
                   learning, collaboration, and networking.
                 </p>
-                <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600">
-                  Parking instructions and any final event updates will be announced
-                  as they become available.
-                </p>
               </div>
               <a
                 href={CFP_REGISTRATION_URL}
