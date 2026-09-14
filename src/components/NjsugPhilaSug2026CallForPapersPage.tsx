@@ -303,10 +303,7 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                 </Link>
               </div>
 
-              <div className="mt-10 grid max-w-5xl gap-3 text-sm font-medium text-white sm:grid-cols-2 lg:grid-cols-3">
-                <p className="border-l-2 border-[#E7FF7A] pl-4">
-                  Registration due: {CFP_REGISTRATION_DEADLINE}
-                </p>
+              <div className="mt-10 grid max-w-5xl gap-3 text-sm font-medium text-white sm:grid-cols-2">
                 <p className="border-l-2 border-[#E7FF7A] pl-4">
                   Event date: {CFP_EVENT_DATE}
                 </p>
