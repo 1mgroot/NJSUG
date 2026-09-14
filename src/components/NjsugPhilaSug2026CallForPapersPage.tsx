@@ -276,7 +276,8 @@ export function NjsugPhilaSug2026CallForPapersPage() {
           <div className="container mx-auto px-4 pb-16 pt-14 md:pb-24 md:pt-20">
             <div className="max-w-4xl">
               <h1 className="text-4xl font-semibold leading-tight md:text-6xl">
-                {CFP_EVENT_NAME}
+                NJSUG &amp; PhilaSUG Joint
+                <span className="block">In-Person Meeting 2026</span>
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-emerald-50 md:text-xl">
                 Join the regional SAS and life sciences community for a day of
