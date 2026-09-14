@@ -30,25 +30,6 @@ export const CFP_LOCATION_POSTAL_CODE = '08543'
 export const CFP_LOCATION_MAP_URL =
   'https://www.google.com/maps/search/?api=1&query=NJHA%20Conference%20and%20Event%20Center%20760%20Alexander%20Rd%20Princeton%20NJ%2008543'
 
-type ImportantDate = {
-  label: string
-  date: string
-  note: string
-}
-
-const importantDates: ImportantDate[] = [
-  {
-    label: 'Registration Due',
-    date: CFP_REGISTRATION_DEADLINE,
-    note: 'Advance registration is mandatory for every attendee.',
-  },
-  {
-    label: 'Event Date',
-    date: CFP_EVENT_DATE,
-    note: 'In-person joint meeting in Princeton, New Jersey.',
-  },
-]
-
 const attendanceBenefits = [
   'Hear practical presentations from industry experts',
   'Explore current SAS technologies, AI, automation, and analytics',
@@ -357,38 +338,7 @@ export function NjsugPhilaSug2026CallForPapersPage() {
             </p>
           </div>
 
-          <div className="mt-10 max-w-3xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-100/75">
-              Event Details
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-              Important dates and location
-            </h2>
-          </div>
-
-          <ol className="mt-8 max-w-4xl overflow-hidden rounded-lg border border-white/15 bg-white/10">
-            {importantDates.map((item, index) => (
-              <li
-                key={item.label}
-                className="grid gap-3 border-b border-white/10 p-5 last:border-b-0 md:grid-cols-[12rem_1fr]"
-              >
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 flex size-7 flex-none items-center justify-center rounded-full bg-[#E7FF7A] text-sm font-bold text-slate-950">
-                    {index + 1}
-                  </span>
-                  <p className="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-100/75">
-                    {item.label}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">{item.date}</h3>
-                  <p className="mt-2 text-sm leading-6 text-emerald-50/85">{item.note}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-
-          <div className="mt-4 rounded-lg border border-white/15 bg-black/10 p-6">
+          <div className="mt-10 rounded-lg border border-white/15 bg-black/10 p-6">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100/70">
