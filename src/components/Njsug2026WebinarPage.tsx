@@ -264,7 +264,7 @@ export function getNjsug2026WebinarStructuredData() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: SITE_URL,
+        item: `${SITE_URL}/home`,
       },
       {
         '@type': 'ListItem',

@@ -12,7 +12,7 @@ import {
 import { Navbar } from '@/components/Navbar'
 
 export const SITE_URL = 'https://www.njsug.org'
-export const CFP_PATH = '/events/njsug-philasug-2026-call-for-papers'
+export const CFP_PATH = '/events/njsug-philasug-2026'
 export const CFP_URL = `${SITE_URL}${CFP_PATH}`
 export const CFP_EVENT_NAME = 'NJSUG & PhilaSUG Joint In-Person Meeting 2026'
 export const CFP_EVENT_DATE = 'Friday, October 9, 2026'
@@ -244,7 +244,7 @@ export function getNjsugPhilaSug2026CfpStructuredData() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: SITE_URL,
+        item: `${SITE_URL}/home`,
       },
       {
         '@type': 'ListItem',
