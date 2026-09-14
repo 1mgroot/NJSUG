@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 
 import { Navbar } from '@/components/Navbar'
+import { VenuePhotoCarousel } from '@/components/VenuePhotoCarousel'
 
 export const SITE_URL = 'https://www.njsug.org'
 export const CFP_PATH = '/events/njsug-philasug-2026'
@@ -360,25 +361,8 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                 Open Map
               </a>
             </div>
-            <div className="grid border-t border-white/15 sm:grid-cols-2 lg:border-l lg:border-t-0">
-              <div className="relative min-h-56 sm:min-h-72 lg:min-h-80">
-                <Image
-                  src="/images/event-photos/njha-conference-room.jpg"
-                  alt="Meeting room at the NJHA Conference and Event Center"
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="relative min-h-56 border-t border-white/15 sm:min-h-72 sm:border-l sm:border-t-0 lg:min-h-80">
-                <Image
-                  src="/images/event-photos/njha-reception.jpg"
-                  alt="Reception area at the NJHA Conference and Event Center"
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
-                  className="object-cover"
-                />
-              </div>
+            <div className="border-t border-white/15 lg:border-l lg:border-t-0">
+              <VenuePhotoCarousel />
             </div>
           </div>
         </section>
