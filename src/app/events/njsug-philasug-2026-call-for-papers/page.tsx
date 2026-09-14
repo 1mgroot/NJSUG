@@ -1,12 +1,5 @@
-import type { Metadata } from 'next'
+import { permanentRedirect } from 'next/navigation'
 
-import {
-  getNjsugPhilaSug2026CfpMetadata,
-  NjsugPhilaSug2026CallForPapersPage,
-} from '@/components/NjsugPhilaSug2026CallForPapersPage'
-
-export const metadata: Metadata = getNjsugPhilaSug2026CfpMetadata()
-
-export default function EventNjsugPhilaSug2026CallForPapersRoute() {
-  return <NjsugPhilaSug2026CallForPapersPage />
+export default function LegacyNjsugPhilaSug2026Route() {
+  permanentRedirect('/events/njsug-philasug-2026')
 }
