@@ -263,8 +263,8 @@ export function NjsugPhilaSug2026CallForPapersPage() {
 
         <section className="relative isolate overflow-hidden border-b border-white/10">
           <Image
-            src="/images/event-photos/njha-conference-room.jpg"
-            alt="Meeting room at the NJHA Conference and Event Center"
+            src="/images/event-photos/Group_1.jpg"
+            alt="NJSUG community event attendees"
             fill
             priority
             sizes="100vw"
@@ -336,7 +336,7 @@ export function NjsugPhilaSug2026CallForPapersPage() {
             </p>
           </div>
 
-          <div className="mt-10 grid overflow-hidden rounded-lg border border-white/15 bg-black/10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="mt-10 grid overflow-hidden rounded-lg border border-white/15 bg-black/10 lg:grid-cols-[0.8fr_1.2fr]">
             <div className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:justify-between md:p-8 lg:flex-col lg:items-start lg:justify-center">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100/70">
@@ -360,14 +360,25 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                 Open Map
               </a>
             </div>
-            <div className="relative min-h-64 border-t border-white/15 lg:min-h-80 lg:border-l lg:border-t-0">
-              <Image
-                src="/images/event-photos/njha-reception.jpg"
-                alt="Reception area at the NJHA Conference and Event Center"
-                fill
-                sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover"
-              />
+            <div className="grid border-t border-white/15 sm:grid-cols-2 lg:border-l lg:border-t-0">
+              <div className="relative min-h-56 sm:min-h-72 lg:min-h-80">
+                <Image
+                  src="/images/event-photos/njha-conference-room.jpg"
+                  alt="Meeting room at the NJHA Conference and Event Center"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative min-h-56 border-t border-white/15 sm:min-h-72 sm:border-l sm:border-t-0 lg:min-h-80">
+                <Image
+                  src="/images/event-photos/njha-reception.jpg"
+                  alt="Reception area at the NJHA Conference and Event Center"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
