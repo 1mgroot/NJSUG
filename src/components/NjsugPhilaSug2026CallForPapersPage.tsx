@@ -19,7 +19,6 @@ export const CFP_EVENT_NAME = 'NJSUG & PhilaSUG Joint In-Person Meeting 2026'
 export const CFP_EVENT_DATE = 'Friday, October 9, 2026'
 export const CFP_EVENT_START = '2026-10-09'
 export const CFP_EVENT_COST = 'Free'
-export const CFP_REGISTRATION_DEADLINE = 'Friday, September 18, 2026'
 export const CFP_CONTACT_EMAIL = 'njsugcontact@gmail.com'
 export const CFP_REGISTRATION_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSfei8rXH3CWpYru64mae6QyFnxbCQtmvV_71pwNViTNDXxDXA/viewform?usp=header'
@@ -428,7 +427,7 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                   Attendee Registration
                 </p>
                 <h2 className="mt-3 max-w-3xl text-3xl font-semibold md:text-4xl">
-                  Register by {CFP_REGISTRATION_DEADLINE}
+                  Register for the joint meeting
                 </h2>
                 <p className="mt-5 max-w-3xl text-base leading-8 text-slate-700">
                   Attendance is free, but advance registration is mandatory for every

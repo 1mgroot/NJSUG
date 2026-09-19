@@ -9,7 +9,6 @@ import {
   CFP_EVENT_DATE,
   CFP_LOCATION_NAME,
   CFP_PATH,
-  CFP_REGISTRATION_DEADLINE,
   CFP_REGISTRATION_URL,
 } from '@/components/NjsugPhilaSug2026CallForPapersPage'
 import {
@@ -206,14 +205,6 @@ export default function Home() {
                     </dt>
                     <dd className="mt-2 text-base font-semibold text-white">
                       {CFP_EVENT_COST}
-                    </dd>
-                  </div>
-                  <div className="py-4">
-                    <dt className="text-xs uppercase tracking-[0.2em] text-emerald-100/65">
-                      Registration Due
-                    </dt>
-                    <dd className="mt-2 text-base font-semibold text-white">
-                      {CFP_REGISTRATION_DEADLINE}
                     </dd>
                   </div>
                 </dl>
