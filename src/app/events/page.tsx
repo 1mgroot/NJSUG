@@ -7,7 +7,6 @@ import {
   CFP_EVENT_COST,
   CFP_EVENT_DATE,
   CFP_PATH,
-  CFP_REGISTRATION_DEADLINE,
   CFP_REGISTRATION_URL,
 } from '@/components/NjsugPhilaSug2026CallForPapersPage'
 import { WEBINAR_2026_PATH } from '@/components/Njsug2026WebinarPage'
@@ -51,7 +50,7 @@ export default function EventsPage() {
               <p className="mt-3 text-base leading-7 text-emerald-50/85">
                 View the agenda for the {CFP_EVENT_DATE} in-person joint event. This
                 is a {CFP_EVENT_COST.toLowerCase()} event, and advance registration is
-                required by {CFP_REGISTRATION_DEADLINE}.
+                required.
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Link
