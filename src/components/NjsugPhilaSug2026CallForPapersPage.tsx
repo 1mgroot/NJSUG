@@ -6,7 +6,6 @@ import {
   CheckCircle2,
   Mail,
   MapPin,
-  UserPlus,
 } from 'lucide-react'
 
 import { Navbar } from '@/components/Navbar'
@@ -20,8 +19,8 @@ export const CFP_EVENT_DATE = 'Friday, October 9, 2026'
 export const CFP_EVENT_START = '2026-10-09'
 export const CFP_EVENT_COST = 'Free'
 export const CFP_CONTACT_EMAIL = 'njsugcontact@gmail.com'
-export const CFP_REGISTRATION_URL =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfei8rXH3CWpYru64mae6QyFnxbCQtmvV_71pwNViTNDXxDXA/viewform?usp=header'
+export const CFP_WAITLIST_EMAIL_URL =
+  'mailto:njsugcontact@gmail.com?subject=NJSUG%20%26%20PhilaSUG%202026%20Waitlist'
 export const CFP_LOCATION_NAME = 'NJHA Conference and Event Center'
 export const CFP_LOCATION_STREET = '760 Alexander Rd'
 export const CFP_LOCATION_CITY = 'Princeton'
@@ -47,7 +46,7 @@ type AgendaItem = {
 }
 
 const agendaItems: AgendaItem[] = [
-  { time: '9:00–9:30 AM', title: 'Breakfast', kind: 'break' },
+  { time: '8:30–9:30 AM', title: 'Breakfast', kind: 'break' },
   { time: '9:30–9:35 AM', title: 'Opening' },
   {
     time: '9:35–10:35 AM',
@@ -98,7 +97,7 @@ const agendaItems: AgendaItem[] = [
       'SKILL.md + SAS: Turning Clinical Programming SOPs into Executable AI Workflows',
     speaker: 'Kevin Lee (Clinvia)',
   },
-  { time: '3:15–3:25 PM', title: 'Closing and Pictures' },
+  { time: '3:15–3:30 PM', title: 'Closing and Pictures' },
 ]
 
 export const CFP_KEYWORDS = [
@@ -115,7 +114,7 @@ export function getNjsugPhilaSug2026CfpMetadata(): Metadata {
   return {
     title: 'NJSUG & PhilaSUG Joint In-Person Meeting 2026',
     description:
-      'View the agenda and register for the NJSUG & PhilaSUG Joint In-Person Meeting on Friday, October 9, 2026, in Princeton, NJ.',
+      'View the agenda and waitlist details for the NJSUG & PhilaSUG Joint In-Person Meeting on Friday, October 9, 2026, in Princeton, NJ.',
     keywords: CFP_KEYWORDS,
     category: 'Event',
     alternates: {
@@ -142,7 +141,7 @@ export function getNjsugPhilaSug2026CfpMetadata(): Metadata {
       card: 'summary_large_image',
       title: 'NJSUG & PhilaSUG Joint In-Person Meeting 2026',
       description:
-        'View the agenda and registration details for the October 9, 2026 joint event.',
+        'View the agenda and waitlist details for the October 9, 2026 joint event.',
       images: [`${SITE_URL}/images/NJSUGBanner.svg`],
     },
   }
@@ -191,13 +190,6 @@ export function getNjsugPhilaSug2026CfpStructuredData() {
     image: `${SITE_URL}/images/NJSUGBanner.svg`,
     url: CFP_URL,
     isAccessibleForFree: true,
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      url: CFP_REGISTRATION_URL,
-    },
   }
 
   const webPageJsonLd = {
@@ -205,7 +197,7 @@ export function getNjsugPhilaSug2026CfpStructuredData() {
     '@type': 'WebPage',
     name: 'NJSUG & PhilaSUG Joint In-Person Meeting 2026',
     description:
-      'Event page for the NJSUG & PhilaSUG Joint In-Person Meeting, including the agenda, event date, location, and registration information.',
+      'Event page for the NJSUG & PhilaSUG Joint In-Person Meeting, including the agenda, event date, location, and waitlist information.',
     url: CFP_URL,
     about: {
       '@id': `${CFP_URL}#event`,
@@ -286,13 +278,11 @@ export function NjsugPhilaSug2026CallForPapersPage() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href={CFP_REGISTRATION_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={CFP_WAITLIST_EMAIL_URL}
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-[#E7FF7A] px-5 py-3 text-sm font-semibold text-slate-950 shadow-lg shadow-black/20 transition hover:bg-[#F2FFA8]"
                 >
-                  <UserPlus className="size-4" aria-hidden="true" />
-                  Register for Free
+                  <Mail className="size-4" aria-hidden="true" />
+                  Join the Waitlist
                 </a>
                 <Link
                   href="#agenda"
@@ -417,33 +407,30 @@ export function NjsugPhilaSug2026CallForPapersPage() {
         </section>
 
         <section
-          id="registration"
+          id="waitlist"
           className="bg-[#E7F4ED] py-14 text-slate-950 md:py-16"
         >
           <div className="container mx-auto px-4">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald-800">
-                  Attendee Registration
+                  Registration Update
                 </p>
                 <h2 className="mt-3 max-w-3xl text-3xl font-semibold md:text-4xl">
-                  Register for the joint meeting
+                  Online registration is now closed
                 </h2>
                 <p className="mt-5 max-w-3xl text-base leading-8 text-slate-700">
-                  Attendance is free, but advance registration is mandatory for every
-                  attendee. Join SAS programmers, statisticians, data scientists,
-                  clinical programmers, and analytics professionals for a day of
-                  learning, collaboration, and networking.
+                  If you would still like to attend, email us to join the waitlist. We
+                  will contact you if space becomes available for this free in-person
+                  event.
                 </p>
               </div>
               <a
-                href={CFP_REGISTRATION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={CFP_WAITLIST_EMAIL_URL}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-emerald-800"
               >
-                <UserPlus className="size-4" aria-hidden="true" />
-                Register for Free
+                <Mail className="size-4" aria-hidden="true" />
+                Email to Join the Waitlist
               </a>
             </div>
 
@@ -473,23 +460,21 @@ export function NjsugPhilaSug2026CallForPapersPage() {
                 Join Us in Princeton
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-white">
-                Register for the joint NJSUG and PhilaSUG meeting.
+                Interested in attending the joint meeting?
               </h2>
               <p className="mt-4 max-w-3xl text-base leading-8 text-emerald-50/90">
-                Review the agenda, register to attend, or contact NJSUG with questions
-                about the upcoming joint meeting.
+                Online registration is closed. Review the agenda or email NJSUG to join
+                the waitlist for the upcoming joint meeting.
               </p>
             </div>
 
             <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
               <a
-                href={CFP_REGISTRATION_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={CFP_WAITLIST_EMAIL_URL}
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-[#E7FF7A] px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#F2FFA8]"
               >
-                <UserPlus className="size-4" aria-hidden="true" />
-                Register for Free
+                <Mail className="size-4" aria-hidden="true" />
+                Join the Waitlist
               </a>
               <Link
                 href="/contact"

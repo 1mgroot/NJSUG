@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, UserPlus } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 
 import { Navbar } from '@/components/Navbar'
 import {
@@ -9,7 +9,7 @@ import {
   CFP_EVENT_DATE,
   CFP_LOCATION_NAME,
   CFP_PATH,
-  CFP_REGISTRATION_URL,
+  CFP_WAITLIST_EMAIL_URL,
 } from '@/components/NjsugPhilaSug2026CallForPapersPage'
 import {
   WEBINAR_2026_PATH,
@@ -211,13 +211,11 @@ export default function Home() {
 
                 <div className="mt-6 flex flex-col gap-3">
                   <a
-                    href={CFP_REGISTRATION_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={CFP_WAITLIST_EMAIL_URL}
                     className="inline-flex items-center justify-center rounded-full border border-white/20 bg-[#E7FF7A] px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-[#F2FFA8]"
                   >
-                    <UserPlus className="mr-2 size-4" aria-hidden="true" />
-                    Register for Free
+                    <Mail className="mr-2 size-4" aria-hidden="true" />
+                    Join the Waitlist
                   </a>
                   <Link
                     href={CFP_PATH}
