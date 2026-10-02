@@ -81,7 +81,7 @@ const agendaItems: AgendaItem[] = [
     participants: [
       'Ryan Yu — Director, Head of Scientific Computing Technology (Regeneron)',
       'Changhong Shi — Executive Director, Statistical Programming (Merck)',
-      'Sangeeta Bhattacharya — Senior Director, Clinical & Statistical Programming; Head, Immunology & Medical Affairs (Johnson & Johnson)',
+      'Renu Shukla — Director, Statistical Programming, Immunology (Johnson & Johnson)',
       'Matthew Cohen — Director of Technical Services (Wharton Research Data Services, University of Pennsylvania)',
       'Moderator: Krutika Parvatikar — Senior Statistical Programming Scientist (Merck)',
     ],
