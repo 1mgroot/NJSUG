@@ -47,8 +47,8 @@ type AgendaItem = {
 }
 
 const agendaItems: AgendaItem[] = [
-  { time: '9:00–9:30 AM', title: 'Breakfast', kind: 'break' },
-  { time: '9:30–9:35 AM', title: 'Opening' },
+  { time: '8:30–9:30 AM', title: 'Registration and Breakfast', kind: 'break' },
+  { time: '9:30–9:35 AM', title: 'Opening Remarks' },
   {
     time: '9:35–10:35 AM',
     title:
@@ -98,7 +98,7 @@ const agendaItems: AgendaItem[] = [
       'SKILL.md + SAS: Turning Clinical Programming SOPs into Executable AI Workflows',
     speaker: 'Kevin Lee (Clinvia)',
   },
-  { time: '3:15–3:25 PM', title: 'Closing and Pictures' },
+  { time: '3:15–3:30 PM', title: 'Closing Remarks, Pictures and Raffle Prizes' },
 ]
 
 export const CFP_KEYWORDS = [
